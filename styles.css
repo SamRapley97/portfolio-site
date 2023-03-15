@@ -1,0 +1,265 @@
+* {
+    font-family: 'Montserrat', sans-serif;
+    /* outline: 1px solid red; */
+    
+}
+
+
+
+body {
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+   
+  
+}
+
+
+.container {
+    display: grid;
+    grid-template-rows: 6;
+    height: 100vh;
+    width: 100vw;
+    overflow-y: scroll;
+    overflow-x: hidden;
+
+
+}
+
+nav {
+    background-color: #0B4F6C;
+    opacity: 90%;
+    width: 100%;
+    position: sticky;
+    top: 0px;
+    z-index: 1; 
+    height: 8vh;
+    
+}
+
+.menu > ul {
+    text-align: center;
+    line-height: 5vh
+}
+.menu > ul > li {
+    display: inline;
+    margin: 20px;
+    font-size: 2vh;
+}
+
+.social_media > ul {
+    position:absolute;
+    top:50%;
+    right: 0;
+    transform:translate(-50%,-50%);
+    margin:0;
+    padding:0.25vw;
+    display:flex;
+
+}
+
+.social_media > ul li {
+    list-style:none;
+
+}
+
+.social_media > ul li a {
+    display:block;
+    position:relative;
+    width:3vw;
+    min-width: 40px;
+    height:6vh;
+    line-height: 6vh;
+    font-size:3vh;
+    text-align:center;
+    text-decoration:none;
+    color:#FFFFFF;
+    margin: 10px;
+    transition:.5s;
+}
+
+.social_media > ul li a span {
+    position:absolute;
+    transition: transform .5s;
+}
+
+.social_media >ul li a span:nth-child(1), ul li a span:nth-child(3){
+    width:100%;
+    height:3px;
+    background:#FFFFFF;
+}
+
+.social_media > ul li a span:nth-child(1) {
+    top:0;
+    left:0;
+    transform-origin: right;
+}
+
+.social_media > ul li a:hover span:nth-child(1) {
+    transform: scaleX(0);
+    transform-origin: left;
+    transition:transform .5s;
+}
+  
+.social_media > ul li a span:nth-child(3) {
+    bottom:0;
+    left:0;
+    transform-origin: left;
+}
+
+.social_media > ul li a:hover span:nth-child(3) {
+    transform: scaleX(0);
+    transform-origin: right;
+    transition:transform .5s;
+}
+  
+.social_media > ul li a span:nth-child(2), ul li a span:nth-child(4){
+    width:3px;
+    height:100%;
+}
+
+.social_media > ul li a span:nth-child(2) {
+    top:0;
+    left:0;
+    transform:scale(0);
+    transform-origin: bottom;
+}
+
+.social_media > ul li a:hover span:nth-child(2) {
+    transform: scale(1);
+    transform-origin: top;
+    transition:transform .5s;
+}
+
+.social_media > ul li a span:nth-child(4) {
+    top:0;
+    right:0;
+    transform:scale(0);
+    transform-origin: top;
+
+}
+  
+.social_media > ul li a:hover span:nth-child(4) {
+    transform: scale(1);
+    transform-origin: bottom;
+    transition:transform .5s;
+}
+  
+.github:hover {
+    color: #171515;
+}
+
+.github:hover span { 
+    background: #171515;
+}
+  
+.linkedin:hover {
+    color: #0072b1;
+}
+  
+.linkedin:hover span { 
+    background: #0072b1;
+}
+  
+  
+@media
+  (prefers-reduced-motion: no-preference) {
+    html {
+      scroll-behavior: smooth;
+    }
+}
+
+#section_1 {
+    background-color: #D9F0FF;
+    min-height: 80vh;
+    display: grid;
+    grid-template-columns: [first] 60% [second] 40%;
+    grid-template-rows: [first-row] 20% [second-row] 80%;
+    position: relative;
+   
+    
+}
+
+
+#section_1 > img {
+    grid-column-start: 1;
+    grid-column-end: 1;
+    max-width: 100%;
+    max-height: 80%;
+    place-self: center;
+    align-self: end;
+}
+
+#section_1 > h3 {
+    grid-row-start: 1;
+    grid-column-start: 1;
+    padding-top: 10%;
+    font-size: 5vw;
+    place-self: center;
+    
+
+}
+
+
+#intro_text {
+    grid-column-start: 2;
+    grid-row-start: 1;
+    grid-row-end: 1;
+    font-size: 3vw;
+    text-align: center;
+    align-self: baseline;
+    margin: 10%;
+    
+    
+    
+}
+
+#section_2 {
+    background-color: #FAF9F6;
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: [first] 40% [second] 60%;
+    position: relative;
+}
+
+#my_projects {
+    font-size: 5vw;
+    grid-column-start: 1;
+    text-align: center;
+    padding-left: 12vh;
+}
+
+#section_3 {
+    background-color: #83C9F4;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: [first] 60% [second] 40%;
+}
+
+#my_future {
+    font-size: 5vw;
+    grid-column-start: 1;
+    text-align: center;
+    padding-left: 12vh;
+}
+
+#section_4 {
+    background-color: #A3D5FF;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: [first] 60% [second] 40%;
+}
+
+
+
+#find_out_more {
+    font-size: 5vw;
+    grid-column-start: 1;
+    text-align: center;
+    padding-left: 12vh;
+}
+
+
+
