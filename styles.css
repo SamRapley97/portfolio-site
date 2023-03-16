@@ -224,9 +224,6 @@ nav {
     padding-top: 10%;
     font-size: 4vw;
     place-self: center;
-   
-   
-    
 
 }
 
@@ -243,6 +240,26 @@ nav {
     
     
 }
+
+#intro_points {
+    list-style-type: none;
+    text-align: center;
+    font-size: 1.5vw;
+    padding-top: 10vh;
+}
+
+#intro_points > li {
+    margin-bottom: 3vh;
+
+}
+
+#intro_points li:before {    
+    font-family: 'FontAwesome';
+    content: '\f096';
+    padding-right: 0.5vw;
+
+}
+
 
 #section_2 {
     background-color: #FAF9F6;
