@@ -12,10 +12,8 @@ body {
     height: 100%;
     margin: 0px;
     padding: 0px;
-   
   
 }
-
 
 .container {
     display: grid;
@@ -227,16 +225,53 @@ header {
     background-color: #FAF9F6;
     min-height: 100vh;
     display: grid;
-    grid-template-rows: [first] 20% [second] 80% ;
+    grid-template-rows: [first] 15% [second] 85% ;
     position: relative;
 }
 
-#my_projects {
-    font-size: 5vw;
-    grid-column-start: 1;
+#section_2 > h3 {
+    font-size: 4vw;
+    grid-row-start: 1;
     text-align: center;
-    padding-left: 12vh;
+    align-self: center;
+    padding-top: 8vh;
 }
+
+#carousel_wrapper {
+    grid-row-start: 2;
+    height: 80%;
+    width: 100%;
+    padding-top: 5%;
+    overflow-x: auto;
+    white-space: nowrap;
+   
+   
+}
+
+
+
+#carousel {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 25%;
+    height: 80%;
+    grid-gap: 4vw;
+    text-align: center;
+
+    
+
+    
+    
+}
+
+#carousel_item {
+    border: 10px solid black;
+    border-radius: 10px;
+
+
+}
+
+
 
 #section_3 {
     background-color: #83C9F4;
@@ -258,8 +293,6 @@ header {
     display: grid;
     grid-template-columns: [first] 60% [second] 40%;
 }
-
-
 
 #find_out_more {
     font-size: 5vw;
