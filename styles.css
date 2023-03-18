@@ -28,7 +28,8 @@ body {
 
 }
 
-nav {
+
+header {
     background-color: #0B4F6C;
     opacity: 90%;
     width: 100%;
@@ -36,17 +37,21 @@ nav {
     top: 0px;
     z-index: 1; 
     height: 8vh;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+  
+}
+
+
+#menu_options {
+    list-style: none;
     
 }
 
-#menu_options {
-    text-align: center;
-    line-height: 5vh;
-    ;
-}
 #menu_options > li {
-    display: inline;
-    margin: 20px;
+    display: inline-block;
+    margin: 1vw;
     font-size: 2vh;
     color: #FFFFFF
 }
@@ -75,118 +80,65 @@ nav {
     transform: translateY(-8px);
 }
 
-.social_media > ul {
-    position:absolute;
-    top:50%;
-    right: 0;
-    transform:translate(-50%,-50%);
-    margin:0;
-    padding:0.25vw;
-    display:flex;
+
+
+#social_media {
+    position: absolute;
+    top: 0.5vh;
+    right: 1.5vw;
+    font-size: 5vh;
+    margin: 1px;
+    z-index: 2;
+   
+}
+
+.github {
+    color: #FFFFFF;
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
 
 }
 
-.social_media > ul li {
-    list-style:none;
 
-}
-
-.social_media > ul li a {
-    display:block;
-    position:relative;
-    width:3vw;
-    min-width: 40px;
-    height:6vh;
-    line-height: 6vh;
-    font-size:3vh;
-    text-align:center;
-    text-decoration:none;
-    color:#FFFFFF;
-    margin: 10px;
-    transition:.5s;
-}
-
-.social_media > ul li a span {
-    position:absolute;
-    transition: transform .5s;
-}
-
-.social_media >ul li a span:nth-child(1), ul li a span:nth-child(3){
-    width:100%;
-    height:3px;
-    background:#FFFFFF;
-}
-
-.social_media > ul li a span:nth-child(1) {
-    top:0;
-    left:0;
-    transform-origin: right;
-}
-
-.social_media > ul li a:hover span:nth-child(1) {
-    transform: scaleX(0);
-    transform-origin: left;
-    transition:transform .5s;
-}
-  
-.social_media > ul li a span:nth-child(3) {
-    bottom:0;
-    left:0;
-    transform-origin: left;
-}
-
-.social_media > ul li a:hover span:nth-child(3) {
-    transform: scaleX(0);
-    transform-origin: right;
-    transition:transform .5s;
-}
-  
-.social_media > ul li a span:nth-child(2), ul li a span:nth-child(4){
-    width:3px;
-    height:100%;
-}
-
-.social_media > ul li a span:nth-child(2) {
-    top:0;
-    left:0;
-    transform:scale(0);
-    transform-origin: bottom;
-}
-
-.social_media > ul li a:hover span:nth-child(2) {
-    transform: scale(1);
-    transform-origin: top;
-    transition:transform .5s;
-}
-
-.social_media > ul li a span:nth-child(4) {
-    top:0;
-    right:0;
-    transform:scale(0);
-    transform-origin: top;
-
-}
-  
-.social_media > ul li a:hover span:nth-child(4) {
-    transform: scale(1);
-    transform-origin: bottom;
-    transition:transform .5s;
-}
-  
 .github:hover {
     color: #171515;
+    opacity: 90%;
+    text-decoration: none;
+    -webkit-transform: translateY(-8px);
+    transform: translateY(-8px);
 }
 
-.github:hover span { 
-    background: #171515;
+.linkedin {
+    color: #FFFFFF;
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+
 }
   
-.linkedin:hover {
+.linkedin:hover  {
     color: #0072b1;
-}
-  
-.linkedin:hover span { 
-    background: #0072b1;
+    opacity: 90%;
+    text-decoration: none;
+    -webkit-transform: translateY(-8px);
+    transform: translateY(-8px);
 }
   
   
@@ -246,6 +198,7 @@ nav {
     text-align: center;
     font-size: 1.5vw;
     padding-top: 10vh;
+    
 }
 
 #intro_points > li {
@@ -257,6 +210,15 @@ nav {
     font-family: 'FontAwesome';
     content: '\f096';
     padding-right: 0.5vw;
+   
+
+}
+
+#intro_points li.checkbox:before {    
+    font-family: 'FontAwesome';
+    content: '\f14a';
+    padding-right: 0.5vw;
+    color: #77dd77;
 
 }
 

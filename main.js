@@ -1,34 +1,32 @@
 window.onload=function(){
 
-/*
-On page loading, wait until page is fully present. 
-Add an event listener that will check that this is correct.
-In a for loop, change bullet point CSS so that it is checked green box, hover in. 
-Only run once per session
+// Delay loop for the intro text list elements
+const delayLoop = (fn, delay) => {
+    return (x, i) => {
+      setTimeout(() => {
+        fn(x);
+      }, i * delay);
+    }
+};
 
-*/
+// Checks whether list animation has already run.
+if (!('hasCodeRunBefore' in localStorage)){
 
+// Gets the individual list elements, converys into an array and adds class of "checkbox to each one"
+  const introPoints = document.getElementById("intro_points").getElementsByTagName("li")
+  const checkBox = x => x.className = "checkbox"
+  Array.from(introPoints).forEach(delayLoop(checkBox, 1000)) 
 
-const introPoints = document.getElementById("intro_points").getElementsByTagName("li")
-console.log(introPoints)
-Array.from(introPoints).forEach((x, i) => {
-  setTimeout(function(){
-    console.log(x)
-    x.style.color = "blue"
-    console.log("${x} is working")
-  }, i * 1000)
+// // Once run, sends to local storage so as to prevent running on every reload.
+  localStorage.setItem("hasCodeRunBefore", true);  
+} 
+else {
+// If local cache exists, gets all the elements and assigns them correct class
+  const introPoints = document.getElementById("intro_points").getElementsByTagName("li")
+  Array.from(introPoints).forEach((x) => {
+  x.className = "checkbox"
 });
-  
 
-
-function greenCheckmark(x) {
-  
-}
-
-
-
-
- 
 
 const menuOptions = document.getElementById("menu_options")
 menuOptions.addEventListener('click', (e) =>
@@ -45,4 +43,4 @@ menuOptions.addEventListener('click', (e) =>
 
 }
 
-
+}
