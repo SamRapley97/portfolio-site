@@ -242,12 +242,10 @@ header {
 #carousel_wrapper {
     grid-row-start: 2;
     display: flex;
-    justify-content: center;
-    overflow-x: scroll;
-    -webkit-overflow-scrolling: touch;
-    -ms-overflow-style: -ms-autohiding-scrollbar; 
     height: 80%;
+    padding-top: 5%;
     margin: 5%;
+    justify-content: center;
     
    
    
@@ -255,10 +253,17 @@ header {
 
 
 #carousel {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    overflow-x: scroll;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: -ms-autohiding-scrollbar; 
     height: 80%;
     width: 100%;
     gap: 2vw;
     text-align: center;
+
 
     
     
@@ -267,7 +272,7 @@ header {
 #carousel_item {
     border: 10px solid black;
     border-radius: 10px;
-    flex-basis: 20%;
+    flex-basis: 40%;
     flex-shrink: 0;
  
    
