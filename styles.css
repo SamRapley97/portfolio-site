@@ -1,6 +1,6 @@
 * {
     font-family: 'GFS Didot', serif;
-    /* outline: 1px solid red; */
+    outline: 1px solid red;
     
 }
 
@@ -237,32 +237,28 @@ header {
     padding-top: 8vh;
 }
 
+
+
 #carousel_wrapper {
     grid-row-start: 2;
+    display: flex;
+    justify-content: center;
+    overflow-x: scroll;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: -ms-autohiding-scrollbar; 
     height: 80%;
-    width: 100%;
-    padding-top: 5%;
-    overflow-x: auto;
-   
-   
+    margin: 5%;
+    
    
    
 }
 
 
-
 #carousel {
-    display: grid;
-    grid-auto-flow: column;
-    grid-auto-columns: 25%;
     height: 80%;
-    grid-gap: 4vw;
+    width: 100%;
+    gap: 2vw;
     text-align: center;
-    justify-content: center;
-   
-    
-
-    
 
     
     
@@ -271,6 +267,9 @@ header {
 #carousel_item {
     border: 10px solid black;
     border-radius: 10px;
+    flex-basis: 20%;
+    flex-shrink: 0;
+ 
    
 
 

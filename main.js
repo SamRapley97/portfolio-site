@@ -12,8 +12,6 @@ const delayLoop = (fn, delay) => {
 };
 
 
-
-
 // Checks whether list animation has already run.
 if (!('hasCodeRunBefore' in localStorage)){
 
