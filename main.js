@@ -2,8 +2,6 @@ window.onload=function(){
 
 
 
-
-
 // Delay loop for the intro text list elements
 const delayLoop = (fn, delay) => {
     return (x, i) => {
@@ -13,19 +11,6 @@ const delayLoop = (fn, delay) => {
     }
 };
 
-
-
-const carouselWrapper = document.getElementById('carousel_wrapper')
-const carouselScroll = () => {
-  setInterval(function() { 
-    carouselWrapper.scrollBy({
-      top: 0,
-      left: 400,
-      behavior: "smooth",
-    })
-}, 2000);
-}
-delayLoop(carouselScroll(), 2000)
 
 
 

@@ -243,7 +243,8 @@ header {
     width: 100%;
     padding-top: 5%;
     overflow-x: auto;
-    white-space: nowrap;
+   
+   
    
    
 }
@@ -257,6 +258,9 @@ header {
     height: 80%;
     grid-gap: 4vw;
     text-align: center;
+    justify-content: center;
+   
+    
 
     
 
@@ -267,6 +271,7 @@ header {
 #carousel_item {
     border: 10px solid black;
     border-radius: 10px;
+   
 
 
 }
