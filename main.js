@@ -30,11 +30,16 @@ else {
   x.className = "checkbox"
 });
 
+}
 
 const menuOptions = document.getElementById("menu_options")
+
+// Adds an event for when one of the menu items is clicked on. 
 menuOptions.addEventListener('click', (e) =>
   {
-    let elementName = e.target.name;
+// Assigns a variable equal to the clicked on menu option's name property. 
+    let elementName = e.target.name; 
+// Sets a timeout so as to ensure that action can be initialised, runs smooth scroll action
     setTimeout(function () {
         document.getElementById(elementName).scrollIntoView({
             behavior: "smooth",
@@ -44,6 +49,11 @@ menuOptions.addEventListener('click', (e) =>
   }
 )
 
-}
+
+
+carousel = document.getElementById('carousel')
+
+carousel.scrollLeft = (carousel.scrollWidth - carousel.clientWidth) / 2
+
 
 }

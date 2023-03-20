@@ -241,12 +241,9 @@ header {
 
 #carousel_wrapper {
     grid-row-start: 2;
-    display: flex;
     height: 80%;
-    padding-top: 5%;
-    margin: 5%;
-    justify-content: center;
-    
+    padding-top: 2%;
+    margin: 4%;
    
    
 }
@@ -256,31 +253,34 @@ header {
     display: flex;
     flex-wrap: nowrap;
     flex-direction: row;
-    overflow-x: scroll;
+    overflow-x: auto;
     -webkit-overflow-scrolling: touch;
     -ms-overflow-style: -ms-autohiding-scrollbar; 
     height: 80%;
-    width: 100%;
     gap: 2vw;
-    text-align: center;
-
-
-    
-    
-}
-
-#carousel_item {
-    border: 10px solid black;
-    border-radius: 10px;
-    flex-basis: 40%;
-    flex-shrink: 0;
- 
+    padding:2vw
    
 
 
+    
+    
 }
 
+.carousel_item {
+    border: 10px solid black;
+    border-radius: 10px;
+    flex-basis: 40%;
+    height: 90%;
+    flex-shrink: 0;
+    margin: auto;
+}
 
+.item:first-child {
+    margin-left: auto;
+}
+.item:last-child {
+    margin-right: auto;
+}
 
 #section_3 {
     background-color: #83C9F4;
