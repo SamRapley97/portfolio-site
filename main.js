@@ -44,6 +44,7 @@ menuOptions.addEventListener('click', (e) =>
         document.getElementById(elementName).scrollIntoView({
             behavior: "smooth",
             block: "start",
+            
         });
     }, 100);
   }

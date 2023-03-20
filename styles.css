@@ -1,6 +1,7 @@
 * {
     font-family: 'GFS Didot', serif;
-    outline: 1px solid red;
+    /* outline: 1px solid red; */
+    ;
     
 }
 
@@ -12,7 +13,7 @@ body {
     height: 100%;
     margin: 0px;
     padding: 0px;
-  
+   
 }
 
 .container {
@@ -22,6 +23,8 @@ body {
     width: 100vw;
     overflow-y: scroll;
     overflow-x: hidden;
+    
+  
 
 
 }
@@ -148,12 +151,16 @@ header {
 }
 
 #section_1 {
-    background-color: #D9F0FF;
-    min-height: 80vh;
+    background-color: white;
+    /* background-color: #D9F0FF; */
+    min-height: 100vh;
     display: grid;
     grid-template-columns: [first] 60% [second] 40%;
     grid-template-rows: [first-row] 20% [second-row] 80%;
     position: relative;
+    padding-top: 1vh;
+    margin-right: 5%;
+    margin-bottom: 5%;
    
     
 }
@@ -172,8 +179,9 @@ header {
     grid-row-start: 1;
     grid-column-start: 1;
     padding-top: 10%;
-    font-size: 4vw;
+    font-size: 5vw;
     place-self: center;
+    
 
 }
 
@@ -182,20 +190,20 @@ header {
     grid-column-start: 2;
     grid-row-start: 1;
     grid-row-end: 1;
-    font-size: 2vw;
+    font-size: 3vw;
     text-align: center;
     align-self: baseline;
-    margin: 10%;
-    
-    
+    margin: 15%;
+
     
 }
 
 #intro_points {
     list-style-type: none;
     text-align: center;
-    font-size: 1.5vw;
-    padding-top: 10vh;
+    font-size: 2vw;
+    padding-top: 22vh;
+    margin-right: 2vw;
     
 }
 
@@ -222,7 +230,8 @@ header {
 
 
 #section_2 {
-    background-color: #FAF9F6;
+    background-color: white;
+    /* background-color: #FAF9F6; */
     min-height: 100vh;
     display: grid;
     grid-template-rows: [first] 15% [second] 85% ;
@@ -234,7 +243,8 @@ header {
     grid-row-start: 1;
     text-align: center;
     align-self: center;
-    padding-top: 8vh;
+    padding-top: 12vh;
+
 }
 
 
@@ -254,25 +264,52 @@ header {
     flex-wrap: nowrap;
     flex-direction: row;
     overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-    -ms-overflow-style: -ms-autohiding-scrollbar; 
+    -ms-overflow-style: none;
+    scrollbar-width: none;
     height: 80%;
     gap: 2vw;
-    padding:2vw
-   
-
-
-    
+    padding:2vw;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 12px 40px 0 rgba(0, 0, 0, 0.19);
     
 }
 
+
+#carousel::-webkit-scrollbar {
+    display: none;
+  }
+  
+
+
+
 .carousel_item {
-    border: 10px solid black;
-    border-radius: 10px;
-    flex-basis: 40%;
+    border: 0.5vw solid #0B4F6C;
+    border-radius: 1vw;
+    flex-basis: 32%;
     height: 90%;
     flex-shrink: 0;
     margin: auto;
+   
+    --c: #418d97; /* the border color */
+    --b: 10px;    /* the border thickness*/
+    --g: 5px;     /* the gap on hover */
+    
+    padding: calc(var(--g) + var(--b));
+    --_g: #0000 25%,var(--c) 0;
+    background: 
+      conic-gradient(from 180deg at top    var(--b) right var(--b),var(--_g))
+       var(--_i,200%) 0  /200% var(--_i,var(--b))  no-repeat,
+      conic-gradient(            at bottom var(--b) left  var(--b),var(--_g))
+       0   var(--_i,200%)/var(--_i,var(--b)) 200%  no-repeat;
+    transition: .6s, background-position .6s .6s;
+    cursor: pointer;
+    overflow: hidden;
+
+}
+
+.carousel_item:hover {
+    --_i: 100%;
+    transition: .6s, background-size .6s .6s;
 }
 
 .item:first-child {
@@ -283,7 +320,8 @@ header {
 }
 
 #section_3 {
-    background-color: #83C9F4;
+    background-color: white;
+    /* background-color: #83C9F4; */
     height: 100vh;
     display: grid;
     grid-template-columns: [first] 60% [second] 40%;
@@ -297,7 +335,8 @@ header {
 }
 
 #section_4 {
-    background-color: #A3D5FF;
+    background-color: white;
+    /* background-color: #A3D5FF; */
     height: 100vh;
     display: grid;
     grid-template-columns: [first] 60% [second] 40%;
