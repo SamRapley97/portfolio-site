@@ -11,6 +11,19 @@ const delayLoop = (fn, delay) => {
     }
 };
 
+let cards = document.querySelectorAll('.left_card');
+cards = [...cards]
+console.log(cards)
+
+cards.forEach((card)=>{
+  card.addEventListener( 'click', function() {
+    console.log('working')
+    card.classList.toggle('is-flipped');
+    
+
+  });
+});
+
 
 // Checks whether list animation has already run.
 if (!('hasCodeRunBefore' in localStorage)){
