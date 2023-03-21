@@ -1,7 +1,7 @@
 * {
     font-family: 'GFS Didot', serif;
     /* outline: 1px solid red; */
-    ;
+
     
 }
 
@@ -155,34 +155,48 @@ header {
     /* background-color: #D9F0FF; */
     min-height: 100vh;
     display: grid;
-    grid-template-columns: [first] 60% [second] 40%;
+    grid-template-columns: [first] 50% [second] 50%;
     grid-template-rows: [first-row] 20% [second-row] 80%;
     position: relative;
     padding-top: 1vh;
-    margin-right: 5%;
     margin-bottom: 5%;
    
     
 }
 
 
-#section_1 > img {
+/* #section_1 > img {
     grid-column-start: 1;
     grid-column-end: 1;
     max-width: 100%;
     max-height: 80%;
     place-self: center;
     align-self: end;
-}
+} */
 
 #section_1 > h3 {
     grid-row-start: 1;
-    grid-column-start: 1;
-    padding-top: 10%;
-    font-size: 5vw;
+    grid-column-start: span 2;
+    padding-top: 2%;
+    font-size: 4vw;
     place-self: center;
+    text-align: center;
+  
+
     
 
+}
+
+.card {
+    grid-column-start: 1;
+    grid-column-end: 1;
+    max-width: 60%;
+    max-height: 80%;
+    place-self: end;
+    align-self: center;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 12px 40px 0 rgba(0, 0, 0, 0.19);
 }
 
 
@@ -202,7 +216,7 @@ header {
     list-style-type: none;
     text-align: center;
     font-size: 2vw;
-    padding-top: 22vh;
+    padding-top: 2vh;
     margin-right: 2vw;
     
 }
@@ -254,6 +268,9 @@ header {
     height: 80%;
     padding-top: 2%;
     margin: 4%;
+    
+
+ 
    
    
 }
@@ -328,7 +345,7 @@ header {
 }
 
 #my_future {
-    font-size: 5vw;
+    font-size: 4vw;
     grid-column-start: 1;
     text-align: center;
     padding-left: 12vh;
@@ -343,7 +360,7 @@ header {
 }
 
 #find_out_more {
-    font-size: 5vw;
+    font-size: 4vw;
     grid-column-start: 1;
     text-align: center;
     padding-left: 12vh;
