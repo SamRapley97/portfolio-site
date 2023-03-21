@@ -150,19 +150,30 @@ header {
     }
 }
 
+h3 {
+    grid-row-start: 1;
+    grid-column-start: span 2;
+    margin: 5%;
+    padding: 2%;
+    font-size: 3vw;
+    place-self: top;
+    text-align: center;
+
+}
+
 #section_1 {
-    background-color: white;
-    /* background-color: #D9F0FF; */
+    background-color: #FFFFFF;
     min-height: 100vh;
     display: grid;
     grid-template-columns: [first] 50% [second] 50%;
     grid-template-rows: [first-row] 20% [second-row] 80%;
     position: relative;
     padding-top: 1vh;
-    margin-bottom: 5%;
+ 
    
     
 }
+
 
 
 /* #section_1 > img {
@@ -174,29 +185,35 @@ header {
     align-self: end;
 } */
 
-#section_1 > h3 {
-    grid-row-start: 1;
-    grid-column-start: span 2;
-    padding-top: 2%;
-    font-size: 4vw;
-    place-self: center;
-    text-align: center;
-  
 
-    
 
-}
-
-.card {
+.left_card {
     grid-column-start: 1;
     grid-column-end: 1;
     max-width: 60%;
     max-height: 80%;
+    margin: 5%;
     place-self: end;
     align-self: center;
     overflow: hidden;
     border-radius: 10px;
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 12px 40px 0 rgba(0, 0, 0, 0.19);
+ 
+}
+
+.right_card {
+    grid-column-start: 2;
+    grid-column-end: 2;
+    max-width: 60%;
+    max-height: 80%;
+    margin: 5%;
+    place-self: start;
+    align-self: center;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 12px 40px 0 rgba(0, 0, 0, 0.19);
+
+
 }
 
 
@@ -216,7 +233,8 @@ header {
     list-style-type: none;
     text-align: center;
     font-size: 2vw;
-    padding-top: 2vh;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
     margin-right: 2vw;
     
 }
@@ -252,27 +270,17 @@ header {
     position: relative;
 }
 
-#section_2 > h3 {
-    font-size: 4vw;
-    grid-row-start: 1;
-    text-align: center;
-    align-self: center;
-    padding-top: 12vh;
-
-}
 
 
 
 #carousel_wrapper {
     grid-row-start: 2;
+    grid-column-start: span 2;
     height: 80%;
     padding-top: 2%;
     margin: 4%;
     
 
- 
-   
-   
 }
 
 
@@ -337,34 +345,24 @@ header {
 }
 
 #section_3 {
-    background-color: white;
-    /* background-color: #83C9F4; */
-    height: 100vh;
+    /* background-color: white; */
+    background-color: #83C9F4;
+    height: 60vh;
     display: grid;
     grid-template-columns: [first] 60% [second] 40%;
 }
 
-#my_future {
-    font-size: 4vw;
-    grid-column-start: 1;
-    text-align: center;
-    padding-left: 12vh;
-}
+
 
 #section_4 {
     background-color: white;
     /* background-color: #A3D5FF; */
-    height: 100vh;
+    height: 50vh;
     display: grid;
     grid-template-columns: [first] 60% [second] 40%;
 }
 
-#find_out_more {
-    font-size: 4vw;
-    grid-column-start: 1;
-    text-align: center;
-    padding-left: 12vh;
-}
+
 
 
 
