@@ -11,18 +11,43 @@ const delayLoop = (fn, delay) => {
     }
 };
 
-let cards = document.querySelectorAll('.left_card');
+let cards = document.querySelectorAll('.card');
 cards = [...cards]
-console.log(cards)
+
+let frontCards = document.getElementsByClassName('front');
+frontCards = [...frontCards]
+
+
 
 cards.forEach((card)=>{
-  card.addEventListener( 'click', function() {
-    console.log('working')
+  
+  card.addEventListener( 'click', function() { 
     card.classList.toggle('is-flipped');
+    if(card.classList.contains('is-flipped')){
+      let frontCards = [...card.getElementsByClassName('front')]
+      let backCards = [...card.getElementsByClassName('back')]
+      console.log(frontCards[0])
+      frontCards[0].classList.add('front_hidden')
+
+    //   frontCards.forEach((x) => {
+    //     x.classList.remove('back_hidden')
+    //     x.classList.add('front_hidden')
+
+    //   })
+    // } 
+    // else if(card.classList.contains('is-flipped') == false) {
+    //   frontCards.forEach((x) => {
+    //     x.classList.remove('front_hidden')
+    //     x.classList.add('back_hidden')
+    //   })
+      
+    }
+    
+    })
     
 
   });
-});
+
 
 
 // Checks whether list animation has already run.
