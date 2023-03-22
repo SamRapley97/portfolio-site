@@ -17,17 +17,36 @@ cards = [...cards]
 let frontCards = document.getElementsByClassName('front');
 frontCards = [...frontCards]
 
-
+const introPoints = document.getElementById("intro_points").getElementsByTagName("li")
+// const introPoints = document.getElementById("intro_points").getElementsByTagName("li")
 
 cards.forEach((card)=>{
   
   card.addEventListener( 'click', function() { 
+  
     card.classList.toggle('is-flipped');
-    if(card.classList.contains('is-flipped')){
+    if(card.classList.contains('is-flipped') == true){
       let frontCards = [...card.getElementsByClassName('front')]
       let backCards = [...card.getElementsByClassName('back')]
-      console.log(frontCards[0])
       frontCards[0].classList.add('front_hidden')
+      backCards[0].classList.remove('back_hidden')
+      const checkBox = x => x.classList.add('checkbox')
+      Array.from(introPoints).forEach(delayLoop(checkBox, 700)) 
+      
+      
+    }
+    else {
+      let frontCards = [...card.getElementsByClassName('front')]
+      let backCards = [...card.getElementsByClassName('back')]
+      frontCards[0].classList.remove('front_hidden')
+      backCards[0].classList.add('back_hidden')
+      const removeCheckBox = x => x.classList.remove('checkbox')
+      Array.from(introPoints).forEach(removeCheckBox)
+
+    
+
+    }
+      // backCards[0].classList.add('back_hidden')
 
     //   frontCards.forEach((x) => {
     //     x.classList.remove('back_hidden')
@@ -41,7 +60,7 @@ cards.forEach((card)=>{
     //     x.classList.add('back_hidden')
     //   })
       
-    }
+    
     
     })
     
@@ -51,24 +70,24 @@ cards.forEach((card)=>{
 
 
 // Checks whether list animation has already run.
-if (!('hasCodeRunBefore' in localStorage)){
+// if (!('hasCodeRunBefore' in localStorage)){
 
-// Gets the individual list elements, converys into an array and adds class of "checkbox to each one"
-  const introPoints = document.getElementById("intro_points").getElementsByTagName("li")
-  const checkBox = x => x.className = "checkbox"
-  Array.from(introPoints).forEach(delayLoop(checkBox, 1000)) 
+// // Gets the individual list elements, converys into an array and adds class of "checkbox to each one"
+//   const introPoints = document.getElementById("intro_points").getElementsByTagName("li")
+//   const checkBox = x => x.className = "checkbox"
+//   Array.from(introPoints).forEach(delayLoop(checkBox, 1000)) 
 
-// // Once run, sends to local storage so as to prevent running on every reload.
-  localStorage.setItem("hasCodeRunBefore", true);  
-} 
-else {
-// If local cache exists, gets all the elements and assigns them correct class
-  const introPoints = document.getElementById("intro_points").getElementsByTagName("li")
-  Array.from(introPoints).forEach((x) => {
-  x.className = "checkbox"
-});
+// // // Once run, sends to local storage so as to prevent running on every reload.
+//   localStorage.setItem("hasCodeRunBefore", true);  
+// } 
+// else {
+// // If local cache exists, gets all the elements and assigns them correct class
+//   const introPoints = document.getElementById("intro_points").getElementsByTagName("li")
+//   Array.from(introPoints).forEach((x) => {
+//   x.className = "checkbox"
+// });
 
-}
+// }
 
 const menuOptions = document.getElementById("menu_options")
 

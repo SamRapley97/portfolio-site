@@ -1,6 +1,6 @@
 * {
     font-family: 'GFS Didot', serif;
-    outline: 1px solid red;
+    /* outline: 1px solid red; */
 
     
 }
@@ -187,8 +187,6 @@ h3 {
 
 
 .card {
-    grid-column-start: 1;
-    grid-column-end: 1;
     width: 60%;
     height: 80%;
     margin: 5%;
@@ -196,10 +194,7 @@ h3 {
     align-self: center;
     overflow: hidden;
     border-radius: 10px;
-    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 12px 40px 0 rgba(0, 0, 0, 0.19);
-    transform-style: preserve-3d;
-    transform-origin: center right;
-    transition: transform 1s;
+    box-shadow: 0 8px 16px 0 #0B4F6C, 0 12px 40px 0 #0B4F6C;
     display: grid;
 
 }
@@ -212,27 +207,36 @@ h3 {
 
 }
 
-.card.is-flipped {
-    transform: translateX(-100%) rotateY(180deg);
-
- 
-
-  }
+.card > button {
+    grid-column: 1;
+    grid-row: 1;
+    width: 100%;
+    height: 10%;
+    place-self: end;
+    background-color: #0B4F6C;
+    color: #FFFFFF;
+    opacity: 0.8;
+    font-size: 2.5em;
+    border: none;
+}
 
 .front {
     grid-row: 1;
     grid-column: 1;
-    /* visibility: hidden; */
-    
 
+    
 }
+
+.front > img {
+    height: 100%;
+    width: 100%;
+}
+
 
 .front_hidden {
     grid-row: 1;
     grid-column: 1;
     display: none;
-
-  
   
 }
 
@@ -242,7 +246,6 @@ h3 {
     grid-column: 1;
     font-size: 10px;
     overflow: hidden;
-    transform: rotateY(-180deg);
   
     
 }
@@ -252,34 +255,6 @@ h3 {
 
 }
 
-
-/* .right_card {
-    grid-column-start: 2;
-    grid-column-end: 2;
-    width: 60%;
-    height: 80%;
-    margin: 5%;
-    place-self: start;
-    align-self: center;
-    overflow: hidden;
-    border-radius: 10px;
-    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 12px 40px 0 rgba(0, 0, 0, 0.19);
-
-
-} */
-
-
-/* #intro_text {
-    grid-column-start: 2;
-    grid-row-start: 1;
-    grid-row-end: 1;
-    font-size: 3vw;
-    text-align: center;
-    align-self: baseline;
-    margin: 15%;
-
-    
-} */
 
 #intro_points {
     list-style-type: none;
@@ -347,7 +322,7 @@ h3 {
     gap: 2vw;
     padding:2vw;
     border-radius: 10px;
-    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 12px 40px 0 rgba(0, 0, 0, 0.19);
+    box-shadow: 0 8px 16px 0 #0B4F6C, 0 12px 40px 0 #0B4F6C;
     
 }
 
@@ -378,7 +353,7 @@ h3 {
        var(--_i,200%) 0  /200% var(--_i,var(--b))  no-repeat,
       conic-gradient(            at bottom var(--b) left  var(--b),var(--_g))
        0   var(--_i,200%)/var(--_i,var(--b)) 200%  no-repeat;
-    transition: .6s, background-position .6s .6s;
+    transition: 1s, background-position 1s 1s;
     cursor: pointer;
     overflow: hidden;
 
