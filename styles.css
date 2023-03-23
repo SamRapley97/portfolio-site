@@ -194,7 +194,7 @@ h3 {
     align-self: center;
     overflow: hidden;
     border-radius: 10px;
-    box-shadow: 0 8px 16px 0 #0B4F6C, 0 12px 40px 0 #0B4F6C;
+    box-shadow: 0 4px 8px 0 #0B4F6C, 0 6px 20px 0 #0B4F6C;
     display: grid;
 
 }
@@ -237,6 +237,7 @@ h3 {
     grid-row: 1;
     grid-column: 1;
     display: none;
+    
   
 }
 
@@ -252,6 +253,7 @@ h3 {
 
 .back_hidden {
     display: none;
+ 
 
 }
 
