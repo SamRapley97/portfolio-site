@@ -1,5 +1,5 @@
 * {
-    font-family: 'GFS Didot', serif;
+    font-family: 'Montserrat', sans-serif;
     /* outline: 1px solid red; */
 
     
@@ -216,8 +216,11 @@ h3 {
     background-color: #0B4F6C;
     color: #FFFFFF;
     opacity: 0.8;
-    font-size: 2.5em;
+    font-size: 1.5em;
     border: none;
+    border-top: 3px solid black;
+    cursor: pointer;
+    
 }
 
 .front {
@@ -231,6 +234,14 @@ h3 {
     height: 100%;
     width: 100%;
 }
+
+.front #intro_text {
+    margin: 5%;
+    padding-top: 5%;
+    text-align: center;
+    font-size: 2.5em;
+}
+
 
 
 .front_hidden {
@@ -251,22 +262,21 @@ h3 {
     
 }
 
+.back #intro_points {
+    list-style-type: none;
+    text-align: center;
+    font-size: 2.5em;
+    padding-top: 3%;
+    padding-bottom: 5vh;
+    margin-right: 2vw;
+}
+
 .back_hidden {
     display: none;
  
 
 }
 
-
-#intro_points {
-    list-style-type: none;
-    text-align: center;
-    font-size: 2vw;
-    padding-top: 5vh;
-    padding-bottom: 5vh;
-    margin-right: 2vw;
-    
-}
 
 #intro_points > li {
     margin-bottom: 3vh;
@@ -288,6 +298,8 @@ h3 {
     color: #77dd77;
 
 }
+
+
 
 
 #section_2 {
