@@ -1,13 +1,10 @@
 import "./styles.css"
 
+
 window.onload=function(){
 
 
-    carousel = document.getElementById('carousel')
-    carousel.scrollLeft = (carousel.scrollWidth - carousel.clientWidth) / 2
-    
-    
-    
+
     // Delay loop for the intro text list elements
     const delayLoop = (fn, delay) => {
         return (x, i) => {
@@ -16,7 +13,10 @@ window.onload=function(){
           }, i * delay);
         }
     };
-    
+
+  
+    const carousel = document.getElementById('carousel')
+    carousel.scrollLeft = (carousel.scrollWidth - carousel.clientWidth) / 2
     
     
     let cards = document.querySelectorAll('.card');
@@ -61,7 +61,7 @@ window.onload=function(){
         })
     
       });
-    
+      
     
       const menuOptions = document.getElementById("menu_options")
     
@@ -79,4 +79,8 @@ window.onload=function(){
               });
           }, 100);
         }
-      )}
+      )
+
+    
+}
+

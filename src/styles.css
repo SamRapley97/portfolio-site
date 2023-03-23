@@ -233,7 +233,7 @@ h3 {
 .front > img {
     height: 100%;
     width: 100%;
-    src: url("resources/profile-pic.jpeg")
+    background-image: url("./profile-pic.jpeg")
 }
 
 .front #intro_text {
