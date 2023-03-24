@@ -1,0 +1,13 @@
+[debug] [2023-03-24T14:03:10.342Z] ----------------------------------------------------------------------
+[debug] [2023-03-24T14:03:10.343Z] Command:       /Users/samwork/.nvm/versions/node/v19.8.1/bin/node /Users/samwork/.nvm/versions/node/v19.8.1/bin/firebase use --add
+[debug] [2023-03-24T14:03:10.343Z] CLI Version:   11.25.1
+[debug] [2023-03-24T14:03:10.343Z] Platform:      darwin
+[debug] [2023-03-24T14:03:10.343Z] Node Version:  v19.8.1
+[debug] [2023-03-24T14:03:10.344Z] Time:          Fri Mar 24 2023 14:03:10 GMT+0000 (Greenwich Mean Time)
+[debug] [2023-03-24T14:03:10.344Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-03-24T14:03:10.374Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-03-24T14:03:10.375Z] > authorizing via signed-in user (samrapley97@gmail.com)
+[debug] [2023-03-24T14:03:10.376Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects pageSize=1000
+[debug] [2023-03-24T14:03:10.892Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects 200
+[debug] [2023-03-24T14:03:10.893Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects [omitted]
