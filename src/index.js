@@ -1,6 +1,5 @@
 import "./styles.css"
 
-console.log('working')
 window.onload=function(){
 
 
