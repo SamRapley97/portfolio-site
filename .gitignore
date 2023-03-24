@@ -1,1 +1,9 @@
 /dist
+/.firebase
+/.github
+.firebaserc
+firebase.json
+webpack.config.json
+
+
+
