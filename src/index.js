@@ -1,5 +1,27 @@
 import "./styles.css"
 
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+  apiKey: "AIzaSyCsUN0Y63kVcvZvBr8DZFBi0r0w_w6LVeY",
+  authDomain: "portfolio-site-927a7.firebaseapp.com",
+  projectId: "portfolio-site-927a7",
+  storageBucket: "portfolio-site-927a7.appspot.com",
+  messagingSenderId: "790567936653",
+  appId: "1:790567936653:web:f369e2320f2b12742ab8c4",
+  measurementId: "G-XR8ZQ05Z5C"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
+
 window.onload=function(){
 
 
