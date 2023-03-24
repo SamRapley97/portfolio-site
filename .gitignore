@@ -2,8 +2,7 @@
 /.firebase
 /node_modules
 .firebaserc
-firebase.json
-webpack.config.json
+
 
 
 
