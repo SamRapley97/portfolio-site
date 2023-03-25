@@ -40,14 +40,13 @@ window.onload=function(){
     carousel.scrollLeft = (carousel.scrollWidth - carousel.clientWidth) / 2
     
     
-    let cards = document.querySelectorAll('.card');
-    cards = [...cards]
+  
     const introPoints = document.getElementById("intro_points").getElementsByTagName("li")
     const checklistCardButton = document.getElementById('right_card_button')
     
     checklistCardButton.addEventListener( 'click', function(){
       this.disabled = true
-      if(cards[1].className == "card right_card" ){
+      if(this.parentNode.className == "card right_card" ){
         const checkBox = x => x.classList.add('checkbox')
         Array.from(introPoints).forEach(delayLoop(checkBox, 700)) 
         setTimeout(() => {this.disabled=false}, 4500)
@@ -59,29 +58,54 @@ window.onload=function(){
       }
     
     })
+
     
-    cards.forEach((card)=>{
+    const introButtons = [...document.getElementsByClassName('intro_buttons')]
+  
+
+    introButtons.forEach((introButton)=>{
       
-      card.addEventListener( 'click', function() { 
-      
-        card.classList.toggle('is-flipped');
-        if(card.classList.contains('is-flipped') == true){
-          let frontCards = [...card.getElementsByClassName('front')]
-          let backCards = [...card.getElementsByClassName('back')]
-          frontCards[0].classList.add('front_hidden')
-          backCards[0].classList.remove('back_hidden')
-        }
-        else {
-          let frontCards = [...card.getElementsByClassName('front')]
-          let backCards = [...card.getElementsByClassName('back')]
-          frontCards[0].classList.remove('front_hidden')
-          backCards[0].classList.add('back_hidden')
-          
-        }
-          
+        introButton.addEventListener( 'click', function() { 
+          let card = this.parentNode
+          this.parentNode.classList.toggle('is-flipped');
+          if(this.parentNode.classList.contains('is-flipped') == true){
+            card.querySelector('.front').classList.add('front_hidden')
+            card.querySelector('.back').classList.remove('back_hidden')
+           
+          }
+          else {
+            card.querySelector('.front').classList.remove('front_hidden')
+            card.querySelector('.back').classList.add('back_hidden')   
+            
+          }
+            
         })
+      
+    });
+        
+      
     
-      });
+    // cards.forEach((card)=>{
+      
+    //   card.addEventListener( 'click', function() { 
+      
+    //     card.classList.toggle('is-flipped');
+    //     if(card.classList.contains('is-flipped') == true){
+         
+    //       frontCards[0].classList.add('front_hidden')
+    //       backCards[0].classList.remove('back_hidden')
+    //     }
+    //     else {
+    //       let frontCards = [...card.getElementsByClassName('front')]
+    //       let backCards = [...card.getElementsByClassName('back')]
+    //       frontCards[0].classList.remove('front_hidden')
+    //       backCards[0].classList.add('back_hidden')
+          
+    //     }
+          
+    //     })
+    
+    //   });
       
     
       const menuOptions = document.getElementById("menu_options")
