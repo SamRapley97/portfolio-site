@@ -66,23 +66,46 @@ window.onload=function(){
 
     
     const introButtons = [...document.getElementsByClassName('intro_buttons')]
-  
+    
+    const changeButtonTest = (x) => {
+
+      if(x.parentNode.classList.contains('is-flipped') == true) {
+        x.innerHTML = "&larr; Back";
+        
+      }
+      else if(x.id == "right_card_button"){
+        x.innerHTML = "Skills & Certifications &rarr;";
+
+      }
+      else {
+        x.innerHTML = "About me &rarr;"
+      }
+     
+      
+    }
 
     introButtons.forEach((introButton)=>{
-      
+       
         introButton.addEventListener( 'click', function() { 
+         
           let card = this.parentNode
           this.parentNode.classList.toggle('is-flipped');
+         
           if(this.parentNode.classList.contains('is-flipped') == true){
             card.querySelector('.front').classList.add('front_hidden')
             card.querySelector('.back').classList.remove('back_hidden')
-           
+            changeButtonTest(this)
+     
             
+           
            
           }
           else {
             card.querySelector('.front').classList.remove('front_hidden')
-            card.querySelector('.back').classList.add('back_hidden')   
+            card.querySelector('.back').classList.add('back_hidden')
+            changeButtonTest(this)
+            
+  
             
           }
             
@@ -90,6 +113,7 @@ window.onload=function(){
       
     });
         
+ 
       
     
     // cards.forEach((card)=>{

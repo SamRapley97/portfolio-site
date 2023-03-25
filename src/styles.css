@@ -20,7 +20,7 @@ body {
     display: grid;
     grid-template-rows: 6;
     height: 100vh;
-    width: 100vw;
+    width: 100%;
     overflow-y: scroll;
     overflow-x: hidden;
     
@@ -164,6 +164,7 @@ h3 {
 #section_1 {
     background-color: #FFFFFF;
     min-height: 100vh;
+    width: 100%;
     display: grid;
     grid-template-columns: [first] 50% [second] 50%;
     grid-template-rows: [first-row] 20% [second-row] 80%;
@@ -177,8 +178,8 @@ h3 {
 
 
 .card {
-    width: 60%;
-    height: 80%;
+    width: clamp(600px, 60%, 600px);
+    height: clamp(400px, 80%, 800px);
     margin: 5%;
     place-self: end;
     align-self: center;
@@ -205,18 +206,20 @@ h3 {
     place-self: end;
     background-color: #0B4F6C;
     color: #FFFFFF;
-    opacity: 0.8;
+    opacity: 1;
     font-size: 1em;
     border: none;
     border-top: 3px solid black;
     cursor: pointer;
+   
     
 }
+
+
 
 .front {
     grid-row: 1;
     grid-column: 1;
-
     
 }
 
@@ -309,8 +312,11 @@ h3 {
     grid-row-start: 2;
     grid-column-start: span 2;
     height: 80%;
+    width: clamp(400px, 80%, 1400px);
+    justify-self: center;
     padding-top: 2%;
     margin: 4%;
+   
     
 
 }
@@ -342,7 +348,7 @@ h3 {
 .carousel_item {
     border: 0.5vw solid #0B4F6C;
     border-radius: 2vw;
-    flex-basis: 32%;
+    flex-basis: clamp(400px, 80%, 140px);
     height: 90%;
     flex-shrink: 0;
     margin: auto;
