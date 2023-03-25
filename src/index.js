@@ -9,19 +9,18 @@ import { getAnalytics } from "firebase/analytics";
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: "AIzaSyCfVAHmazdBEbedaMgRXTioNRz15r0f56w",
-  authDomain: "portfolio-site-staging-eb356.firebaseapp.com",
-  projectId: "portfolio-site-staging-eb356",
-  storageBucket: "portfolio-site-staging-eb356.appspot.com",
-  messagingSenderId: "989341024010",
-  appId: "1:989341024010:web:ef84e194c6aba63240c4f3",
-  measurementId: "G-DKX65NXSFY"
+  apiKey: "AIzaSyCsUN0Y63kVcvZvBr8DZFBi0r0w_w6LVeY",
+  authDomain: "portfolio-site-927a7.firebaseapp.com",
+  projectId: "portfolio-site-927a7",
+  storageBucket: "portfolio-site-927a7.appspot.com",
+  messagingSenderId: "790567936653",
+  appId: "1:790567936653:web:f369e2320f2b12742ab8c4",
+  measurementId: "G-XR8ZQ05Z5C"
 };
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
-
 
 window.onload=function(){
 
@@ -41,14 +40,13 @@ window.onload=function(){
     carousel.scrollLeft = (carousel.scrollWidth - carousel.clientWidth) / 2
     
     
-    let cards = document.querySelectorAll('.card');
-    cards = [...cards]
+  
     const introPoints = document.getElementById("intro_points").getElementsByTagName("li")
     const checklistCardButton = document.getElementById('right_card_button')
     
     checklistCardButton.addEventListener( 'click', function(){
       this.disabled = true
-      if(cards[1].className == "card right_card" ){
+      if(this.parentNode.className == "card right_card" ){
         const checkBox = x => x.classList.add('checkbox')
         Array.from(introPoints).forEach(delayLoop(checkBox, 700)) 
         setTimeout(() => {this.disabled=false}, 4500)
@@ -60,29 +58,54 @@ window.onload=function(){
       }
     
     })
+
     
-    cards.forEach((card)=>{
+    const introButtons = [...document.getElementsByClassName('intro_buttons')]
+  
+
+    introButtons.forEach((introButton)=>{
       
-      card.addEventListener( 'click', function() { 
-      
-        card.classList.toggle('is-flipped');
-        if(card.classList.contains('is-flipped') == true){
-          let frontCards = [...card.getElementsByClassName('front')]
-          let backCards = [...card.getElementsByClassName('back')]
-          frontCards[0].classList.add('front_hidden')
-          backCards[0].classList.remove('back_hidden')
-        }
-        else {
-          let frontCards = [...card.getElementsByClassName('front')]
-          let backCards = [...card.getElementsByClassName('back')]
-          frontCards[0].classList.remove('front_hidden')
-          backCards[0].classList.add('back_hidden')
-          
-        }
-          
+        introButton.addEventListener( 'click', function() { 
+          let card = this.parentNode
+          this.parentNode.classList.toggle('is-flipped');
+          if(this.parentNode.classList.contains('is-flipped') == true){
+            card.querySelector('.front').classList.add('front_hidden')
+            card.querySelector('.back').classList.remove('back_hidden')
+           
+          }
+          else {
+            card.querySelector('.front').classList.remove('front_hidden')
+            card.querySelector('.back').classList.add('back_hidden')   
+            
+          }
+            
         })
+      
+    });
+        
+      
     
-      });
+    // cards.forEach((card)=>{
+      
+    //   card.addEventListener( 'click', function() { 
+      
+    //     card.classList.toggle('is-flipped');
+    //     if(card.classList.contains('is-flipped') == true){
+         
+    //       frontCards[0].classList.add('front_hidden')
+    //       backCards[0].classList.remove('back_hidden')
+    //     }
+    //     else {
+    //       let frontCards = [...card.getElementsByClassName('front')]
+    //       let backCards = [...card.getElementsByClassName('back')]
+    //       frontCards[0].classList.remove('front_hidden')
+    //       backCards[0].classList.add('back_hidden')
+          
+    //     }
+          
+    //     })
+    
+    //   });
       
     
       const menuOptions = document.getElementById("menu_options")
