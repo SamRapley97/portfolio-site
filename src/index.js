@@ -77,6 +77,8 @@ window.onload=function(){
             card.querySelector('.front').classList.add('front_hidden')
             card.querySelector('.back').classList.remove('back_hidden')
            
+            
+           
           }
           else {
             card.querySelector('.front').classList.remove('front_hidden')
