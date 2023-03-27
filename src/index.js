@@ -65,7 +65,6 @@ window.onload=function(){
     })
 
     
-    const introButtons = [...document.getElementsByClassName('intro_buttons')]
     
     const changeButtonTest = (x) => {
 
@@ -83,6 +82,8 @@ window.onload=function(){
      
       
     }
+
+    const introButtons = [...document.getElementsByClassName('intro_buttons')]
 
     introButtons.forEach((introButton)=>{
        
@@ -105,38 +106,11 @@ window.onload=function(){
             card.querySelector('.back').classList.add('back_hidden')
             changeButtonTest(this)
             
-  
-            
           }
             
         })
       
     });
-        
- 
-      
-    
-    // cards.forEach((card)=>{
-      
-    //   card.addEventListener( 'click', function() { 
-      
-    //     card.classList.toggle('is-flipped');
-    //     if(card.classList.contains('is-flipped') == true){
-         
-    //       frontCards[0].classList.add('front_hidden')
-    //       backCards[0].classList.remove('back_hidden')
-    //     }
-    //     else {
-    //       let frontCards = [...card.getElementsByClassName('front')]
-    //       let backCards = [...card.getElementsByClassName('back')]
-    //       frontCards[0].classList.remove('front_hidden')
-    //       backCards[0].classList.add('back_hidden')
-          
-    //     }
-          
-    //     })
-    
-    //   });
       
     
       const menuOptions = document.getElementById("menu_options")

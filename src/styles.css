@@ -327,6 +327,7 @@ h3 {
     flex-wrap: nowrap;
     flex-direction: row;
     overflow-x: auto;
+    overflow-y: hidden;
     -ms-overflow-style: none;
     scrollbar-width: none;
     height: 80%;
@@ -358,20 +359,25 @@ h3 {
 
 .card_content {
     align-self: flex-end;
-    justify-self: center;
-    text-align: center;
-
+    margin: 5%;
     opacity: 1;
-    transform: translate3d(0, 20px, 0);
-   
     cursor: pointer;
+    transform: translate3d(0, 210px, 0);
     transition: 0.25s all ease-in-out;
 }
 
 .card_content:hover {
     opacity: 1;
     transform: translate3d(0, 0, 0);
+    
 }
+
+.project_description  {
+    visibility: hidden;
+    pointer-events: none;
+    
+}
+
 
 #section_3 {
     /* background-color: white; */
