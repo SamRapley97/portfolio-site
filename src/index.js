@@ -50,16 +50,17 @@ window.onload=function(){
     const checklistCardButton = document.getElementById('right_card_button')
     
     checklistCardButton.addEventListener( 'click', function(){
-      this.disabled = true
       if(this.parentNode.className == "card right_card" ){
+        this.disabled = true
         const checkBox = x => x.classList.add('checkbox')
         Array.from(introPoints).forEach(delayLoop(checkBox, 700)) 
         setTimeout(() => {this.disabled=false}, 4500)
+        console.log('working')
       } 
       else {
         const removeCheckBox = x => x.classList.remove('checkbox')
         Array.from(introPoints).forEach(removeCheckBox)
-        this.disabled = false;
+        this.disabled = false
       }
     
     })
@@ -96,9 +97,6 @@ window.onload=function(){
             card.querySelector('.front').classList.add('front_hidden')
             card.querySelector('.back').classList.remove('back_hidden')
             changeButtonTest(this)
-     
-            
-           
            
           }
           else {
@@ -116,7 +114,22 @@ window.onload=function(){
     // description is made visible
     // whilst cursor is inside card, hover class remains toggled. 
     // upon cursor being removed, hover class toggles off and description is hidden. 
-      
+
+      const cardContent = [...document.getElementsByClassName("card_content")]
+     
+      cardContent.forEach((cardArea) => {
+        cardArea.addEventListener('mouseenter', function() {
+            cardArea.classList.toggle('card_content_hover')
+          
+  
+        })
+        cardArea.addEventListener('mouseleave', function() {
+            cardArea.classList.toggle('card_content_hover')
+        })
+
+      })
+
+
     
       const menuOptions = document.getElementById("menu_options")
     
