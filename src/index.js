@@ -113,8 +113,9 @@ window.onload=function(){
     });
 
     // on hovering over the h2 of the carousel item, item's hover class is to be toggled
+    // description is made visible
     // whilst cursor is inside card, hover class remains toggled. 
-    // upon cursor being removed, hover class toggles off.
+    // upon cursor being removed, hover class toggles off and description is hidden. 
       
     
       const menuOptions = document.getElementById("menu_options")
