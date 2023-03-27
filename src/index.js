@@ -111,6 +111,10 @@ window.onload=function(){
         })
       
     });
+
+    // on hovering over the h2 of the carousel item, item's hover class is to be toggled
+    // whilst cursor is inside card, hover class remains toggled. 
+    // upon cursor being removed, hover class toggles off.
       
     
       const menuOptions = document.getElementById("menu_options")
