@@ -174,23 +174,21 @@ h3 {
 .card {
     grid-column-start: 1;
     grid-column-end: 1;
-    grid-area: "first_card";
-    width: clamp(300px, 60%, 600px);
-    height: clamp(400px, 80%, 800px);
+    width: clamp(300px, 50%, 600px);
+    height: clamp(200px, 50%, 800px);
     margin: 5%;
     place-self: end;
     align-self: center;
     overflow: hidden;
     border-radius: 2vw;
     box-shadow: 0 4px 8px 0 #0B4F6C, 0 6px 20px 0 #0B4F6C;
-    display: grid
+    display: grid;
+    box-sizing:border-box;
 
 
 }
 
 .card.right_card {
-    width: clamp(300px, 60%, 600px);
-    height: clamp(400px, 80%, 800px);
     grid-column-start: 2;
     grid-column-end: 2;
     place-self: start;
@@ -295,131 +293,38 @@ h3 {
 
 }
 
-/* @media screen and (max-width: 400px) {
+@media screen and (max-width: 780px) {
 
     
     #section_1 {
-        grid-template-columns: 1fr;
-        grid-template-rows: 15vh 1fr 10vh 1fr 10vh;
-        padding-bottom: 10vh;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        gap: 2vh;
+        justify-content: space-between;
+        min-height: 200vh;
         
     }
 
-    #section_1 > h3 {
-        grid-row-start: 1;
-        grid-row-end: 1;
-        justify-content: center;
-        
-        
-    }
+
 
     .card {
-        grid-column-start: 1;
-        grid-column-end: 3;
-        grid-row-start: 2;
-        grid-row-end: 2;
         justify-self: center;
   
     
     }
 
     .card.right_card {
-        grid-column-start: 1;
-        grid-column-end: 3;
-        grid-row-start: 4;
-        grid-row-end: 4;
         justify-self: center;
-        display: grid;
+
 
     
     }
 
-    .front {
-        grid-column-start: 1;
-        grid-column-end: 3;
-        grid-row-start: 2;
-        grid-row-end: 2;
-   
-        
-    }
-
-    .back {
-        grid-column-start: 1;
-        grid-column-end: 3;
-        grid-row-start: 4;
-        grid-row-end: 4;
-  
-    }
-
-    .front #intro_text {
-        margin: 5%;
-        padding-top: 5%;
-        text-align: center;
-        font-size: 2.5em;
-    }
-    
-    
-    
-    .front_hidden {
-        grid-row: 1;
-        grid-column: 1;
-        display: none;
-        
-      
-    }
-    
-    
-    .back {
-        grid-row: 1;
-        grid-column: 1;
-        font-size: 10px;
-        overflow: hidden;
-      
-        
-    }
-    
-    .back #intro_points {
-        list-style-type: none;
-        text-align: center;
-        font-size: 10px;
-        padding-top: 3%;
-        padding-bottom: 4vh;
-        margin-right: 2vw;
-    }
-    
-    .back_hidden {
-        display: none;
-     
-    
-    }
-    
-    
-    #intro_points > li {
-        margin-bottom: 3vh;
-    
-    }
-
-    .card > button {
-        grid-column: 1;
-        grid-row: 1;
-        width: 100%;
-        height: 10%;
-        place-self: end;
-        background-color: #0B4F6C;
-        color: #FFFFFF;
-        opacity: 1;
-        font-size: 1em;
-        border: none;
-        border-top: 3px solid black;
-        cursor: pointer;
        
         
-    }
+    } 
     
-
-
-  } */
-
 
 
 #section_2 {
