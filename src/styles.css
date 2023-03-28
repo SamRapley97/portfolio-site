@@ -367,7 +367,7 @@ h3 {
     -ms-overflow-style: none;
     scrollbar-width: none;
     height: 80%;
-    width: clamp(1vw, 80%, 1400px);
+    width: clamp(1vw, 85%, 1400px);
     gap: 2vw;
     padding:2vw;
     border-radius: 10px;
@@ -387,7 +387,7 @@ h3 {
 .carousel_item {
     border: 0.5vw solid #0B4F6C;
     border-radius: 2vw;
-    flex-basis: clamp(300px, 80%, 140px);
+    flex-basis: clamp(400px, 80%, 140px);
     height: 90%;
     flex-shrink: 0;
     margin: auto;
@@ -428,10 +428,12 @@ h3 {
 #section_3 {
     /* background-color: white; */
     background-color: #83C9F4;
-    height: 60vh;
+    height: 100vh;
     display: grid;
-    grid-template-columns: [first] 60% [second] 40%;
+    grid-template-rows: [first] 15% [second] 85%;
+    justify-content: center;
 }
+
 
 
 
