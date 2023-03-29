@@ -150,8 +150,7 @@ h3 {
     grid-row-start: 1;
     grid-column-start: span 2;
     margin: 5%;
-    padding: 2%;
-    font-size: clamp(40px, 5vw, 600px);;
+    font-size: clamp(40px, 5vw, 100px);;
     place-self: top;
     text-align: center;
 
@@ -174,8 +173,8 @@ h3 {
 .card {
     grid-column-start: 1;
     grid-column-end: 1;
-    width: clamp(300px, 50%, 600px);
-    height: clamp(200px, 60%, 800px);
+    width: clamp(300px, 30vw, 600px);
+    height: clamp(200px, 70vh, 800px);
     margin: 5%;
     place-self: end;
     align-self: center;
@@ -321,8 +320,11 @@ h3 {
 
     
     }
-
-       
+    #section_3 {
+        min-height: 200vh;
+        grid-template-rows: [first] 5% [second] 85%;
+    
+    }
         
     } 
     
@@ -421,44 +423,91 @@ h3 {
 }
 
 .project_description {
-    align-self:flex-start
+    align-self: flex-start
 }
 
 
 #section_3 {
     /* background-color: white; */
     background-color: #83C9F4;
-    height: 100vh;
+    height: 140vh;
     display: grid;
-    grid-template-rows: [first] 15% [second] 85%;
-    justify-content: center;
+    grid-template-rows: 1fr 11fr;
 }
 
 
-.future_tech {
+.future_tech_wrapper {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    list-style-type: none;
     text-align: center;
-    width: 1500px;
+    overflow: hidden;
+
    
 
 }
 
-.future_tech > li {
-    flex-basis: 30%;
-    margin: 10%;
+.future_tech_items {
+    box-sizing: border-box;
+    margin: 3%;
+    display: grid;
     justify-items: center;
+    justify-content: center;
+    align-items: center;
+    grid-template-rows: [first] 80% [second] 20%;
+    width: clamp(300px, 40vw, 1000px);
+    height: clamp(200px, 40vh, 800px);
 
 }
+
+.future_tech_items > p {
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
 
 .ci-cd  {
-    content: url('./cicd.png');
+    content: url('./ci-cd.png');
     max-width: 60%;
+    grid-row-start: 1;
+    grid-row-end: 1;
+   
+
+
 }
+
+.cypress  {
+    content: url('./cypress.png');
+    max-width: 80%;
+    grid-row-start: 1;
+    grid-row-end: 1;
+  
+}
+
+.selenium  {
+    content: url('./selenium.png');
+    max-width: 40%;
+    grid-row-start: 1;
+    grid-row-end: 1;
+
+}
+
+.cyber_security  {
+    content: url('./cybersec.png');
+    max-width: 40%;
+    grid-row-start: 1;
+    grid-row-end: 1;
+}
+
+.linux  {
+    content: url('./linux.png');
+    max-width: 50%;
+    grid-row-start: 1;
+    grid-row-end: 1;
+  
+} 
 
 
 #section_4 {
