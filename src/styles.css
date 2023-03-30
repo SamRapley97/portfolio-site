@@ -171,8 +171,8 @@ h3 {
 .card {
     grid-column-start: 1;
     grid-column-end: 1;
-    width: clamp(300px, 30vw, 600px);
-    height: clamp(200px, 70vh, 800px);
+    width: clamp(300px, 80%, 500px);
+    height: clamp(400px, 80%, 600px);
     margin: 5%;
     place-self: end;
     align-self: center;
@@ -307,8 +307,8 @@ h3 {
 #carousel_wrapper {
     grid-row-start: 2;
     grid-column-start: span 2;
-    height: 80%;
-    width: clamp(3vw, 70%, 1500px);
+    width: clamp(300px, 80%, 1100px);
+    height: clamp(300px, 80%, 600px);
     justify-self: center;
     justify-content: center;
     align-items: center;
@@ -328,10 +328,9 @@ h3 {
     flex-direction: row;
     overflow-x: scroll;
     overflow-y: hidden;
+    height: 80%;
     -ms-overflow-style: none;
     scrollbar-width: none;
-    height: 80%;
-    width: clamp(1vw, 85%, 1400px);
     gap: 2vw;
     padding:2vw;
     border-radius: 10px;
@@ -351,8 +350,8 @@ h3 {
 .carousel_item {
     border: 0.5vw solid #0B4F6C;
     border-radius: 2vw;
-    flex-basis: clamp(400px, 80%, 140px);
-    height: 90%;
+    flex-basis: clamp(250px, 80%, 500px);
+    height: clamp(300px, 90%, 600px);
     flex-shrink: 0;
     margin: auto;
     display: flex;
@@ -370,7 +369,7 @@ h3 {
     padding: 4%;
     border-top: 3px solid black;
     cursor: pointer;
-    transform: translate3d(0, 70%, 0);
+    transform: translate3d(0, 65%, 0);
     transition: 1s all ease-in-out;
 
    
@@ -395,6 +394,7 @@ h3 {
     height: 140vh;
     display: grid;
     grid-template-rows: 1fr 11fr;
+    grid-template-columns: 1fr;
 }
 
 
@@ -404,7 +404,13 @@ h3 {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    border: solid red 3px ;
     overflow: hidden;
+    width: clamp(300px, 80%, 1600px);
+    margin-left: auto;
+    margin-right: auto;
+   
+
     
    
 
@@ -422,17 +428,30 @@ h3 {
     justify-items: center;
     justify-content: center;
     align-items: center;
-    grid-template-rows: [first] 80% [second] 20%;
-    width: clamp(300px, 40vw, 1000px);
-    height: clamp(300px, 40vh, 800px);
+    grid-template-rows: [first] 10% [second] 70% [third] 10%;
+    width: clamp(300px, 35%, 1000px);
+    height: clamp(300px, 40%, 800px);
+
+}
+
+.future_tech_items > h4 {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 1;
+    text-align: center;
+    font-size: clamp(30px, 80%, 500px);
+    padding: 10%;
+    font-weight: 1000;
+
 
 }
 
 .future_tech_items > p {
     grid-column-start: 1;
     grid-column-end: 3;
-    grid-row-start: 2;
-    grid-row-end: 2;
+    grid-row-start: 3;
+    grid-row-end: 3;
     align-self: flex-start;
     text-align: center;
     
@@ -445,8 +464,8 @@ h3 {
     max-width: 40%;
     grid-column-start: 1;
     grid-column-end: 3;
-    grid-row-start: 1;
-    grid-row-end: 1;
+    grid-row-start: 2;
+    grid-row-end: 2;
    
 
 
@@ -455,35 +474,39 @@ h3 {
 .cypress  {
     content: url('./cypress.png');
     max-width: 80%;
-    grid-row-start: 1;
-    grid-row-end: 1;
+    grid-row-start: 2;
+    grid-row-end: 2;
+   
   
 }
 
 .selenium  {
     content: url('./selenium.png');
     max-width: 40%;
-    grid-row-start: 1;
-    grid-row-end: 1;
+    grid-row-start: 2;
+    grid-row-end: 2;
+   
 
 }
 
 .cyber_security  {
     content: url('./cybersec.png');
-    max-width: 30%;
+    max-width: 25%;
     grid-column-start: 1;
     grid-column-end: 3;
-    grid-row-start: 1;
-    grid-row-end: 1;
+    grid-row-start: 2;
+    grid-row-end: 2;
+   
 }
 
 .linux  {
     content: url('./linux.png');
-    max-width: 30%;
+    max-width: 25%;
     grid-column-start: 1;
     grid-column-end: 3;
-    grid-row-start: 1;
-    grid-row-end: 1;
+    grid-row-start: 2;
+    grid-row-end: 2;
+   
   
 } 
 
@@ -497,16 +520,14 @@ h3 {
 }
 
 
-@media screen and (max-width: 780px) {
+@media screen and (max-width: 820px) {
 
     
     #section_1 {
         display: flex;
         flex-direction: column;
         flex-wrap: nowrap;
-        gap: 2vh;
-        justify-content: space-between;
-        min-height: 200vh;
+        min-height: 160vh;
         
     }
 
@@ -521,17 +542,45 @@ h3 {
     .card.right_card {
         justify-self: center;
 
+    }
+
+    #section_2 {
+        min-height: 100vh;
+        margin-top: 5%;
+    }
+
+    #carousel_wrapper {
+        padding-top: 0;
+        margin: 0;
+        display: flex;
 
     
     }
+
+    .card_content {
+        transform: translate3d(0, 75%, 0);
+        transition: 1s all ease-in-out;
+
+   
+    }
+    
+    
+    
+    .card_content_hover {
+        transform: translate3d(0, 0, 0);
+        
+        
+    } 
+    
+
     #section_3 {
-        min-height: 230vh;
+        min-height: 300vh;
         grid-template-rows: [first] 10% [second] 90%;
     
     }
 
     .future_tech_items {
-        grid-template-rows: [first] 50% [second] 50%;
+        grid-template-rows: [first] 10% [second] 60% [third] 30%;
     
     }
 
