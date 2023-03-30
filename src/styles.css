@@ -11,7 +11,7 @@ body {
     width: 100%;
     margin: 0px;
     padding: 0px;
-    overflow-x: hidden;
+    
    
 }
 
@@ -19,8 +19,6 @@ body {
     display: grid;
     grid-template-rows: 6;
     width: 100%;
-    overflow-y: scroll;
-    overflow-x: scroll;
 
 }
 
@@ -310,7 +308,7 @@ h3 {
     grid-row-start: 2;
     grid-column-start: span 2;
     height: 80%;
-    width: clamp(3vw, 80%, 1500px);
+    width: clamp(3vw, 70%, 1500px);
     justify-self: center;
     justify-content: center;
     align-items: center;
