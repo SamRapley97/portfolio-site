@@ -1,7 +1,5 @@
 * {
     font-family: 'Montserrat', sans-serif;
-    /* outline: 1px solid red; */
-
     
 }
 
@@ -171,8 +169,8 @@ h3 {
 .card {
     grid-column-start: 1;
     grid-column-end: 1;
-    width: clamp(300px, 80%, 500px);
-    height: clamp(400px, 80%, 600px);
+    width: clamp(300px, 70vw, 640px);
+    height: clamp(450px, 50vh, 600px);
     margin: 5%;
     place-self: end;
     align-self: center;
@@ -297,7 +295,7 @@ h3 {
     /* background-color: #FAF9F6; */
     min-height: 100vh;
     display: grid;
-    grid-template-rows: [first] 15% [second] 85% ;
+    grid-template-rows: [first] 20% [second] 80% ;
 
 }
 
@@ -307,8 +305,8 @@ h3 {
 #carousel_wrapper {
     grid-row-start: 2;
     grid-column-start: span 2;
-    width: clamp(300px, 80%, 1100px);
-    height: clamp(300px, 80%, 600px);
+    width: clamp(300px, 70vw, 1400px);
+    height: clamp(500px, 50vh, 700px);
     justify-self: center;
     justify-content: center;
     align-items: center;
@@ -350,7 +348,7 @@ h3 {
 .carousel_item {
     border: 0.5vw solid #0B4F6C;
     border-radius: 2vw;
-    flex-basis: clamp(250px, 80%, 500px);
+    flex-basis: clamp(250px, 40%, 500px);
     height: clamp(300px, 90%, 600px);
     flex-shrink: 0;
     margin: auto;
@@ -406,9 +404,10 @@ h3 {
     align-items: center;
     border: solid red 3px ;
     overflow: hidden;
-    width: clamp(300px, 80%, 1600px);
+    width: clamp(300px, 70vw, 1500px);
     margin-left: auto;
     margin-right: auto;
+   
    
 
     
@@ -429,9 +428,14 @@ h3 {
     justify-content: center;
     align-items: center;
     grid-template-rows: [first] 10% [second] 70% [third] 10%;
-    width: clamp(300px, 35%, 1000px);
-    height: clamp(300px, 40%, 800px);
+    width: clamp(300px, 25vw, 1000px);
+    height: clamp(300px, 40vh, 1000px);
+    transition: 1s;
 
+}
+
+.future_tech_items:hover {
+    transform: scale(1.05);
 }
 
 .future_tech_items > h4 {
@@ -440,7 +444,7 @@ h3 {
     grid-row-start: 1;
     grid-row-end: 1;
     text-align: center;
-    font-size: clamp(30px, 80%, 500px);
+    font-size: clamp(20px, 80%, 500px);
     padding: 10%;
     font-weight: 1000;
 
@@ -514,9 +518,17 @@ h3 {
 #section_4 {
     background-color: white;
     /* background-color: #A3D5FF; */
-    height: 50vh;
+    height: 80vh;
     display: grid;
-    grid-template-columns: [first] 60% [second] 40%;
+    grid-template-rows: [first] 15% [second] 85%;
+    grid-template-columns: 1fr;
+}
+
+#section_4 > h4 {
+    grid-row-start: 2;
+    text-align: center;
+    font-size: 2em;
+    padding: 5%;
 }
 
 
@@ -558,7 +570,7 @@ h3 {
     }
 
     .card_content {
-        transform: translate3d(0, 75%, 0);
+        transform: translate3d(0, 80%, 0);
         transition: 1s all ease-in-out;
 
    
@@ -574,23 +586,23 @@ h3 {
     
 
     #section_3 {
-        min-height: 300vh;
+        min-height: 240vh;
         grid-template-rows: [first] 10% [second] 90%;
     
+    
+    }
+
+    .future_tech_wrapper {
+        gap: 5vh;
     }
 
     .future_tech_items {
-        grid-template-rows: [first] 10% [second] 60% [third] 30%;
+        grid-template-rows: [first] 10% [second] 40% [third] 40%;
+       
     
     }
 
 
-
-    #ci-cd_text {
-        min-height: 25vh;
-        color: blue;
-    }
-    
         
     } 
 
