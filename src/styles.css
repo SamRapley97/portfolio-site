@@ -169,7 +169,7 @@ h3 {
 .card {
     grid-column-start: 1;
     grid-column-end: 1;
-    width: clamp(300px, 70vw, 640px);
+    width: clamp(300px, 30vw, 640px);
     height: clamp(450px, 50vh, 600px);
     margin: 5%;
     place-self: end;
@@ -389,7 +389,7 @@ h3 {
 #section_3 {
     /* background-color: white; */
     background-color: #83C9F4;
-    height: 140vh;
+    height: 130vh;
     display: grid;
     grid-template-rows: 1fr 11fr;
     grid-template-columns: 1fr;
@@ -402,9 +402,8 @@ h3 {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    border: solid red 3px ;
     overflow: hidden;
-    width: clamp(300px, 70vw, 1500px);
+    width: clamp(300px, 100%, 1800px);
     margin-left: auto;
     margin-right: auto;
    
@@ -421,14 +420,14 @@ h3 {
     border-radius: 2vw;
     box-shadow: 0 4px 8px 0 #0B4F6C, 0 6px 20px 0 #0B4F6C;
     overflow: hidden;
-    margin: 3%;
+    margin:3%;
     padding: 2%;
     display: grid;
     justify-items: center;
     justify-content: center;
     align-items: center;
-    grid-template-rows: [first] 10% [second] 70% [third] 10%;
-    width: clamp(300px, 25vw, 1000px);
+    grid-template-rows: [first] 10% [second] 60% [third] 30%;
+    width: clamp(300px, 30vw, 600px);
     height: clamp(300px, 40vh, 1000px);
     transition: 1s;
 
@@ -518,19 +517,37 @@ h3 {
 #section_4 {
     background-color: white;
     /* background-color: #A3D5FF; */
-    height: 80vh;
+    height: 100vh;
     display: grid;
-    grid-template-rows: [first] 15% [second] 85%;
-    grid-template-columns: 1fr;
+    grid-template-rows: [first] 10% [second] 20% [third] 70%;
+    grid-template-columns: [first] 50% [second] 50%;
+
 }
 
 #section_4 > h4 {
+    grid-column-start: 1;
+    grid-column-end: 3;
     grid-row-start: 2;
+    grid-row-end: 2;
+    justify-self: center;
     text-align: center;
     font-size: 2em;
     padding: 5%;
+    max-width: 55%;
 }
 
+.contact_column {
+    width: clamp(300px, 70vw, 640px);
+    height: clamp(450px, 50vh, 600px);
+    margin: 5%;
+    place-self: end;
+    align-self: center;
+    overflow: hidden;
+    border-radius: 2vw;
+    box-shadow: 0 4px 8px 0 #0B4F6C, 0 6px 20px 0 #0B4F6C;
+    display: grid;
+    box-sizing:border-box;
+}
 
 @media screen and (max-width: 820px) {
 
