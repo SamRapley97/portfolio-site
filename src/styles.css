@@ -547,6 +547,51 @@ h3 {
     box-shadow: 0 4px 8px 0 #0B4F6C, 0 6px 20px 0 #0B4F6C;
     display: grid;
     box-sizing:border-box;
+    transition: 1s;
+}
+
+.quote_column {
+    width: clamp(300px, 70vw, 640px);
+    height: clamp(450px, 50vh, 600px);
+    margin: 5%;
+    place-self: start;
+    align-self: center;
+    overflow: hidden;
+    border-radius: 2vw;
+    box-shadow: 0 4px 8px 0 #0B4F6C, 0 6px 20px 0 #0B4F6C;
+    display: grid;
+    box-sizing:border-box;
+    transition: 1s;
+}
+
+#contact_list {
+    list-style-type: none;
+    display: inline-block;
+    text-align: center;
+    justify-self: center;
+    font-size: clamp(20px, 1.5vw, 800px);
+    padding-top: 3%;
+    padding-bottom: 4vh;
+    line-height: 2em;
+
+}
+
+#contact_list > li {
+    margin: 1em
+
+    
+}
+
+#contact_list > li:hover {
+    color: #0B4F6C;
+    cursor: pointer;
+
+    
+}
+
+
+.contact_column:hover, .quote_column:hover {
+    transform: scale(1.05);
 }
 
 @media screen and (max-width: 820px) {
