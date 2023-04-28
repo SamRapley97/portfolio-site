@@ -169,7 +169,7 @@ h3 {
 .card {
     grid-column-start: 1;
     grid-column-end: 1;
-    width: clamp(300px, 30vw, 640px);
+    width: clamp(300px, 33vw, 640px);
     height: clamp(450px, 50vh, 600px);
     margin: 5%;
     place-self: end;
@@ -427,7 +427,7 @@ h3 {
     justify-content: center;
     align-items: center;
     grid-template-rows: [first] 10% [second] 60% [third] 30%;
-    width: clamp(300px, 30vw, 600px);
+    width: clamp(300px, 32vw, 650px);
     height: clamp(300px, 40vh, 1000px);
     transition: 1s;
 
