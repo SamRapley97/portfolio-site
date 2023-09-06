@@ -27,8 +27,8 @@ if (process.env.NODE_ENV !== 'production') {
 }
 
 
-window.onload=function(){
 
+window.onload=function(){
 
 
     // Delay loop for the intro text list elements
@@ -131,23 +131,48 @@ window.onload=function(){
 
 
     
+      const menuLinks = document.querySelectorAll(".menu_links");
       const menuOptions = document.getElementById("menu_options")
-    
-      // Adds an event for when one of the menu items is clicked on. 
-      menuOptions.addEventListener('click', (e) =>
-        {
-      // Assigns a variable equal to the clicked on menu option's name property. 
-          let elementName = e.target.name; 
-      // Sets a timeout so as to ensure that action can be initialised, runs smooth scroll action
-          setTimeout(function () {
-              document.getElementById(elementName).scrollIntoView({
-                  behavior: "smooth",
-                  block: "start",
-                  
-              });
-          }, 100);
+
+      menuLinks.forEach((item) => {
+        item.addEventListener('click', () => {
+          scrollMenu(item);
+        });
+      });
+      
+      function scrollMenu(item) {
+      
+        // Adds an event for when one of the menu items is clicked on.
+        
+        // Assigns a variable equal to the clicked-on menu option's name property.
+        let elementName = item.getAttribute("name"); // Use getAttribute to get the 'name' attribute
+        
+        // Sets a timeout so as to ensure that action can be initialized, runs smooth scroll action
+        setTimeout(function () {
+          document.getElementById(elementName).scrollIntoView({
+            behavior: "smooth",
+            block: "start",
+          });
+        }, 100);
+        menuOptions.style.display = "block"
+        responsiveMenu()
+      }
+
+
+      document.getElementById("menuButton").addEventListener('click', responsiveMenu)
+      
+      function responsiveMenu() {
+        console.log("test")
+        if (menuOptions.style.display === "block") {
+          menuOptions.style.display = "none"
         }
-      )
+        else {
+           menuOptions.style.display = "block"
+     
+        }
+      }
+
+    
 
     
 }
