@@ -470,11 +470,7 @@ h3 {
     grid-column-end: 3;
     grid-row-start: 1;
     grid-row-end: 1;
-    text-align: center;
-    font-size: clamp(20px, 80%, 500px);
-    padding: 10%;
-    font-weight: 1000;
-
+    font-size: clamp(20px, 80%, 500px); 
 
 }
 
@@ -683,7 +679,7 @@ h3 {
         /* background-color: #A3D5FF; */
         height: 50vh;
         display: grid;
-        grid-template-rows: [first] 25% [second] 50% [third] 25%;
+        grid-template-rows: [first] 20% [second] 50% [third] 30%;
     
     }
 
@@ -705,6 +701,7 @@ h3 {
         text-align: center;
         font-size: 2em;
         max-width: 100%;
+        padding-top: 5%;
 
     
     }
