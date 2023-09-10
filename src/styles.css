@@ -687,7 +687,7 @@ h3 {
         /* background-color: #A3D5FF; */
         height: 50vh;
         display: grid;
-        grid-template-rows: [first] 20% [second] 50% [third] 30%;
+        grid-template-rows: [first] 10% [second] 60% [third] 30%;
     
     }
 
