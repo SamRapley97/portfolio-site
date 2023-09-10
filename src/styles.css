@@ -485,7 +485,7 @@ h3 {
     grid-row-end: 3;
     font-size: clamp(15px, 1.2vw, 20px);
     font-weight: bold;
-    align-self: flex-start;
+    align-self: center;
     text-align: center;
     
 
@@ -662,7 +662,7 @@ h3 {
     
 
     #section_3 {
-        min-height: 240vh;
+        min-height: 260vh;
         grid-template-rows: [first] 10% [second] 90%;
     
     
@@ -705,7 +705,7 @@ h3 {
         text-align: center;
         font-size: 2em;
         max-width: 100%;
-        padding-right: 15%;
+
     
     }
 
@@ -715,9 +715,11 @@ h3 {
         text-align: center;
         place-items: center;
         font-size: clamp(20px, 1.5vw, 800px);
+        max-width: 100%;
         padding-top: 5%;
         padding-bottom: 4vh;
         line-height: 2em;
+        white-space: nowrap;
     
     }
     
@@ -748,7 +750,6 @@ h3 {
         position: fixed;
         right: 0%;
         top: 5%;
-        height: 40%;
         width: 100%;
         text-align: center;
         z-index: 1;
@@ -758,8 +759,7 @@ h3 {
     .mobile_menu > li > a {
         text-decoration: none;
         font-size: 2vh;
-        margin: 0vh;
-        margin-top: 10%;
+        margin: 5%;
         justify-self: center;
         
     }
