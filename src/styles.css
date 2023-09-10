@@ -23,7 +23,7 @@ body {
 
 header {
     background-color: #0B4F6C;
-    opacity: 90%;
+    opacity: 100%;
     width: 100%;
     position: sticky;
     top: 0px;
@@ -623,6 +623,10 @@ h3 {
     
     }
 
+    .front > img {
+        background-image: url("./profile-pic-mobile.jpeg");
+    }
+
     .card.right_card {
         justify-self: center;
 
@@ -756,6 +760,7 @@ h3 {
     .mobile_menu > li > a {
         text-decoration: none;
         font-size: 2vh;
+        font-weight: strong;
         margin: 5%;
         justify-self: center;
         
