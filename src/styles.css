@@ -716,8 +716,8 @@ h3 {
         place-items: center;
         font-size: clamp(20px, 1.5vw, 800px);
         max-width: 100%;
-        padding-top: 5%;
-        padding-bottom: 4vh;
+        padding: 0;
+        margin: 0;
         line-height: 2em;
         white-space: nowrap;
     
