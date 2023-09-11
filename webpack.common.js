@@ -17,12 +17,7 @@ module: {
       type: 'asset/resource',
     },
 
-    {
-      test:/\.html$/,
-      use: [
-        'html-loader'
-      ]
-    },
+ 
     {
       test: /\.(png|svg|jpg|jpeg|gif)$/i,
       type: 'asset/resource',
@@ -31,6 +26,13 @@ module: {
         publicPath: "assets/images/",
         outputPath: "assets/images/",
       },
+    },
+
+    {
+      test:/\.html$/,
+      use: [
+        'html-loader'
+      ]
     },
   ]
   },
