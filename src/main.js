@@ -1,5 +1,6 @@
 import "./styles.css"
 
+
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
@@ -28,7 +29,9 @@ if (process.env.NODE_ENV !== 'production') {
 
 
 
+
 window.onload=function(){
+  
 
 
     // Delay loop for the intro text list elements
