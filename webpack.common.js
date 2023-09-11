@@ -12,10 +12,17 @@ module: {
         'css-loader'
       ]
     },
+
     {
-      test: /\.(png|svg|jpg|jpeg|gif)$/i,
-      type: 'asset/resource',
+      test:/\.html$/,
+      use: [
+        'html-loader'
+      ]
     },
+    // {
+    //   test: /\.(png|svg|jpg|jpeg|gif)$/i,
+    //   type: 'asset/resource',
+    // },
 
  
     {
@@ -26,14 +33,10 @@ module: {
         publicPath: "assets/images/",
         outputPath: "assets/images/",
       },
+      
     },
 
-    {
-      test:/\.html$/,
-      use: [
-        'html-loader'
-      ]
-    },
+
   ]
   },
 
@@ -46,13 +49,14 @@ module: {
   },
   plugins: [
  new HtmlWebpackPlugin({
-    template: './src/index.ejs',
+    template: './src/index.html',
     minify: {
         removeComments: true,
         collapseWhitespace: true,
         removeAttributeQuotes: true
     },
-    chunksSortMode: 'none'
+    chunksSortMode: 'none',
+   
   })
   ]
 };
