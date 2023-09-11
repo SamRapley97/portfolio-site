@@ -16,6 +16,21 @@ module: {
       test: /\.(png|svg|jpg|jpeg|gif)$/i,
       type: 'asset/resource',
     },
+    {
+      test: /\.(gif|png|avif|jpe?g)$/,
+      type: "asset/resource",
+      generator: {
+        filename: "[name][ext]",
+        publicPath: "assets/images/",
+        outputPath: "assets/images/",
+      },
+    },
+    {
+      test:/\.html$/,
+      use: [
+        'html-loader'
+      ]
+    },
   ]
   },
 
