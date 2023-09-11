@@ -1,6 +1,8 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const path = require('path');
 
+
+
 module.exports = {
 
 module: {
@@ -13,28 +15,19 @@ module: {
       ]
     },
 
-    {
-      test:/\.html$/,
-      use: [
-        'html-loader'
-      ]
-    },
-    // {
-    //   test: /\.(png|svg|jpg|jpeg|gif)$/i,
-    //   type: 'asset/resource',
-    // },
-
  
     {
       test: /\.(png|svg|jpg|jpeg|gif)$/i,
       type: 'asset/resource',
       generator: {
+        
         filename: "[name][ext]",
         publicPath: "assets/images/",
         outputPath: "assets/images/",
       },
       
     },
+
 
 
   ]
@@ -50,14 +43,11 @@ module: {
   plugins: [
  new HtmlWebpackPlugin({
     template: './src/index.html',
-    minify: {
-        removeComments: true,
-        collapseWhitespace: true,
-        removeAttributeQuotes: true
-    },
-    chunksSortMode: 'none',
-   
+
   })
-  ]
+  ],
+
+  
+  
 };
 
