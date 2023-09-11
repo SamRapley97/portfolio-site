@@ -249,14 +249,15 @@ h3 {
     box-sizing: border-box;
     width: 100%;
     height: 100%;
+    overflow: hidden;
     
 }
 
 .front > img {
     width: 100%;
     height: 100%;
-    object-fit: contain;
-    background-image: url("./profile-pic.jpeg");
+    object-fit: cover;
+  
 }
 
 .front #intro_text {
@@ -594,7 +595,7 @@ h3 {
     list-style-type: none;
     text-align: center;
     font-size: clamp(20px, 1.5vw, 800px);
-    padding-top: 10%;
+    padding-top: 15%;
     padding-bottom: 4vh;
     line-height: 2em;
     display: flex; 
@@ -644,9 +645,6 @@ h3 {
     
     }
 
-    .front > img {
-        background-image: url("./profile-pic-mobile.jpeg");
-    }
 
     .card.right_card {
         justify-self: center;
