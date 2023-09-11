@@ -505,7 +505,7 @@ h3 {
 
 
 .ci-cd  {
-    content: url('./ci-cd.png');
+    content: url('./assets/images/ci-cd.png');
     max-width: 40%;
     grid-column-start: 1;
     grid-column-end: 3;
@@ -517,7 +517,7 @@ h3 {
 }
 
 .cypress  {
-    content: url('./cypress.png');
+    content: url('./assets/images/cypress.png');
     max-width: 80%;
     grid-row-start: 2;
     grid-row-end: 2;
@@ -526,7 +526,7 @@ h3 {
 }
 
 .selenium  {
-    content: url('./selenium.png');
+    content: url('./assets/images/selenium.png');
     max-width: 40%;
     grid-row-start: 2;
     grid-row-end: 2;
@@ -535,7 +535,7 @@ h3 {
 }
 
 .cyber_security  {
-    content: url('./cybersec.png');
+    content: url('./assets/images/cybersec.png');
     max-width: 25%;
     grid-column-start: 1;
     grid-column-end: 3;
@@ -545,7 +545,7 @@ h3 {
 }
 
 .linux  {
-    content: url('./linux.png');
+    content: url('./assets/images/linux.png');
     max-width: 25%;
     grid-column-start: 1;
     grid-column-end: 3;
