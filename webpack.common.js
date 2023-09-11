@@ -36,16 +36,21 @@ module: {
 
  
 
-  entry: './src/index.js',
+  entry: './src/main.js',
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist'),
   },
   plugins: [
-    new HtmlWebpackPlugin({
-      title: 'custom template',
-      template: './src/index.html'
-    })
+ new HtmlWebpackPlugin({
+    template: './src/index.ejs',
+    minify: {
+        removeComments: true,
+        collapseWhitespace: true,
+        removeAttributeQuotes: true
+    },
+    chunksSortMode: 'none'
+  })
   ]
 };
 
