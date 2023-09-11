@@ -425,8 +425,13 @@ h3 {
     
 }
 
+.project_name {
+    margin: 0;
+}
+
 .project_description {
-    align-self: flex-start
+    align-self: flex-start;
+    margin-top: 10%;
 }
 
 
