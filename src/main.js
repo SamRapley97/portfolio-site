@@ -119,15 +119,28 @@ window.onload=function(){
     // upon cursor being removed, hover class toggles off and description is hidden. 
 
       const cardContent = [...document.getElementsByClassName("card_content")]
+      
      
       cardContent.forEach((cardArea) => {
         cardArea.addEventListener('mouseenter', function() {
             cardArea.classList.toggle('card_content_hover')
+            setTimeout(function () {
+              cardArea.querySelector("div").classList.toggle('project_description_hover')
+            
+            }, 800);
+          
+
           
   
         })
         cardArea.addEventListener('mouseleave', function() {
             cardArea.classList.toggle('card_content_hover')
+            setTimeout(function () {
+              cardArea.querySelector("div").classList.toggle('project_description_hover')
+            }, 800);
+          
+
+
         })
 
       })
