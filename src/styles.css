@@ -300,9 +300,8 @@ h3 {
 .back #intro_points {
     list-style-type: none;
     text-align: center;
-    font-size: clamp(20px, 1vw, 800px);
+    font-size: clamp(15px, 1vw, 800px);
     padding-top: 3%;
-    padding-bottom: 4vh;
     margin-right: 10%;
 }
 
