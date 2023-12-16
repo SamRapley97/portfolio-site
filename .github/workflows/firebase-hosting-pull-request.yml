@@ -52,7 +52,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Waiting for Firebase Preview
-        uses: samrapley97/wait-for-firebase-action@v1
+        uses: actions/checkout@v3
         id: wait-for-firebase-preview
         with:
           site_name: "pull-request"
