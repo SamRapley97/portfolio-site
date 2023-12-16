@@ -6,11 +6,13 @@ name: Playwright Tests and Deploy to Firebase Hosting
 on:
   pull_request
 
+env:
+  GITHUB_PR_NUMBER: ${{github.event.pull_request.number}}
+
 jobs:
 
   build_and_preview:
     if: '${{ github.event.pull_request.head.repo.full_name == github.repository }}'
-    needs: test
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
@@ -26,6 +28,7 @@ jobs:
 
   test:
     timeout-minutes: 60
+    needs: build_and_preview
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
@@ -40,6 +43,8 @@ jobs:
         run: npx playwright install --with-deps
       - name: Run Playwright tests
         run: npx playwright test
+        env:
+          PLAYWRIGHT_TEST_BASE_URL: "https://portfolio-site-927a7--${{env.GITHUB_PR_NUMBER}}-development-a0hfhnky.web.app"
       - name: Upload Playwright report artifact
         uses: actions/upload-artifact@v3
         if: always()

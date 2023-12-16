@@ -23,7 +23,7 @@ export default defineConfig({
   reporter: 'html',
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
-    baseURL: 'https://samrapley.me',
+    baseURL: process.env.PLAYWRIGHT_TEST_BASE_URL || 'https://samrapley.me',
     trace: 'on-first-retry',
   },
 
