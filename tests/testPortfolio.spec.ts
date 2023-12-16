@@ -1,10 +1,10 @@
 import { test, expect } from '@playwright/test';
 
-test.beforeEach(async ({page}) => {
-    //go to starting url before each test
-    await page.goto('http://localhost:8000/');
+// test.beforeEach(async ({page}) => {
+//     //go to starting url before each test
+//     await page.goto('http://localhost:8000/');
  
-})
+// })
 
 test('has title', async ({ page }) => {
   // Expect a title "to contain" a substring.
