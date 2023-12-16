@@ -7,6 +7,23 @@ on:
   pull_request
 
 jobs:
+
+  build_and_preview:
+    if: '${{ github.event.pull_request.head.repo.full_name == github.repository }}'
+    needs: test
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+      - name: Install Dependencies
+        run: npm install
+      - run: npm run build
+      - uses: FirebaseExtended/action-hosting-deploy@v0
+        with:
+          repoToken: '${{ secrets.GITHUB_TOKEN }}'
+          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_PORTFOLIO_SITE_927A7 }}'
+          projectId: portfolio-site-927a7
+
   test:
     timeout-minutes: 60
     runs-on: ubuntu-latest
@@ -30,21 +47,33 @@ jobs:
           name: playwright-report
           path: playwright-report/
           retention-days: 30
-
-  build_and_preview:
-    if: '${{ github.event.pull_request.head.repo.full_name == github.repository }}'
-    needs: test
+    
+    tests_e2e_firebase_prepare:
+    name: Wait for deployment on Netlify
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
-      - name: Install Dependencies
-        run: npm install
-      - run: npm run build
-      - uses: FirebaseExtended/action-hosting-deploy@v0
+      - name: Waiting for Firebase Preview
+        uses: samrapley97/wait-for-firebase-action@v1
+        id: wait-for-firebase-preview
         with:
-          repoToken: '${{ secrets.GITHUB_TOKEN }}'
-          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_PORTFOLIO_SITE_927A7 }}'
-          projectId: portfolio-site-927a7
+          site_name: "pull-request"
+          max_timeout: 180
 
-
+  tests_e2e_firebase:
+    needs: tests_e2e_firebase_prepare
+    name: Run end-to-end tests on Firebase PR preview
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+      - name: install dependencies
+        run: npm ci
+      - name: install playwright browsers
+        run: npx playwright install --with-deps
+      - name: npm run test:e2e
+        run: npm run test:e2e
+        env:
+          PLAYWRIGHT_TEST_BASE_URL: "https://portfolio-site-927a7--${{env.GITHUB_PR_NUMBER}}-development-a0hfhnky.web.app"
+          
+     
