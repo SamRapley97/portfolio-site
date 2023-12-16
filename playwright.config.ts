@@ -23,7 +23,7 @@ export default defineConfig({
   reporter: 'html',
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
-    baseURL: process.env.PLAYWRIGHT_TEST_BASE_URL || 'http://localhost:8080/',
+    baseURL: 'https://samrapley.me',
     trace: 'on-first-retry',
   },
 
@@ -66,8 +66,8 @@ export default defineConfig({
   ],
 
   /* Run your local dev server before starting the tests */
-  webServer: {
-    command: 'npm run start',
+  // webServer: {
+  //   command: 'npm run start',
 
-  },
+  // },
 });
