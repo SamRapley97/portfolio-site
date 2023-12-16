@@ -2,8 +2,7 @@
 /.firebase
 /node_modules
 .firebaserc
-
-
-
-
-
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/
