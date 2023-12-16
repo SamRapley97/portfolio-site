@@ -44,7 +44,7 @@ jobs:
       - name: Run Playwright tests
         run: npx playwright test
         env:
-          PLAYWRIGHT_TEST_BASE_URL: "https://portfolio-site-927a7--${{env.GITHUB_PR_NUMBER}}-development-a0hfhnky.web.app"
+          PLAYWRIGHT_TEST_BASE_URL: "https://portfolio-site-927a7--pr${{env.GITHUB_PR_NUMBER}}-development-a0hfhnky.web.app"
       - name: Upload Playwright report artifact
         uses: actions/upload-artifact@v3
         if: always()
