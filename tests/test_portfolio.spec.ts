@@ -23,5 +23,26 @@ test('hover action on project reveals project description', async ({ page }) => 
 
   // expects hovered para description to contain text turtle crossing game
   await expect(paragraphDescription).toContainText("turtle crossing game");
+})
+
+test('skill boxes are checked', async ({ page }) => {
+
+  
+  const liElements = await page.$$('#intro_points li');
+
+  page.locator('button:text("Skills & Certifications")').click()
+
+  await page.waitForTimeout(5000)
+
+  for (const liElement of liElements) {
+    await liElement.evaluate(skillElement => {
+      skillElement.classList.contains("checkbox")
+    })
+  }
+
+
 });
+
+
+
 
