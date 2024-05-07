@@ -58,7 +58,6 @@ window.onload=function(){
         const checkBox = x => x.classList.add('checkbox')
         Array.from(introPoints).forEach(delayLoop(checkBox, 700)) 
         setTimeout(() => {this.disabled=false}, 4500)
-        console.log('working')
       } 
       else {
         const removeCheckBox = x => x.classList.remove('checkbox')
