@@ -559,8 +559,8 @@ h3 {
   
 }
 
-.selenium  {
-    content: url('./assets/images/selenium.png');
+.playwright  {
+    content: url('./assets/images/playwright.png');
     max-width: 40%;
     grid-row-start: 2;
     grid-row-end: 2;
