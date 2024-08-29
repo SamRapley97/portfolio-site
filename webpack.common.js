@@ -43,6 +43,7 @@ module: {
   plugins: [
  new HtmlWebpackPlugin({
     template: './src/index.html',
+    favicon: "./src/assets/images/logo.png"
 
   })
   ],
