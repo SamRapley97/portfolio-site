@@ -175,14 +175,22 @@ window.onload=function(){
 
 
       document.getElementById("menuButton").addEventListener('click', responsiveMenu)
+      const menuButtonIcon = document.getElementById("menuButtonIcon")
       
       function responsiveMenu() {
         console.log("test")
         if (menuOptions.style.display === "block") {
           menuOptions.style.display = "none"
+          menuButtonIcon.classList.toggle("fa-bars")
+          menuButtonIcon.classList.toggle("fa-x")
+         
         }
         else {
-           menuOptions.style.display = "block"
+          menuOptions.style.display = "block"
+          menuButtonIcon.classList.toggle("fa-bars")
+          menuButtonIcon.classList.toggle("fa-x")
+
+   
      
         }
       }
